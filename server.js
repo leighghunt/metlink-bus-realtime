@@ -33,7 +33,7 @@ server.listen(process.env.PORT);
 var vehicles = {};
 var trails = {};
 
-let services = ['KPL', 'HVL', 'JVL', 'MEL', 'WRL', 60, 220, 210, 226, 236, 230, 250, 260];
+let services = ['KPL', 'HVL', 'JVL', 'MEL', 'WRL', 60, 220, 210, 226, 236, 230, 250, 260, 530];
 let url = 'https://www.metlink.org.nz/api/v1/ServiceLocation/';
 
 function callAPI(){
