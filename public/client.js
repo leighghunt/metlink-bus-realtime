@@ -82,7 +82,7 @@ vehiclesRequest.send();
 
 
 socket.on('location', function (data) {
-  console.log(data);
+  // console.log(data);
   handleVehicleData(data);
 });
           
@@ -95,21 +95,28 @@ function handleVehicleData(data){
   
   vehicles[data.VehicleRef] = data;
   let colour = 'green';
-    let fillColour = '#3f0';
-    if(data.DelaySeconds>60){
-      colour = 'yellow';
-      fillColour = '#ffff33';
-      if(data.DelaySeconds>300){
-        colour = 'red';
-        fillColour = '#FF0033';
-      }      
-    }
-    // console.log(data);
-    let recordedAtTime = new Date(data.RecordedAtTime);
-    let timeNow = new Date();
-    console.log(timeNow - recordedAtTime)/1000);
-    // if(data.){
-    // }
+  let fillColour = '#3f0';
+  if(data.DelaySeconds>60){
+    colour = 'yellow';
+    fillColour = '#ffff33';
+    if(data.DelaySeconds>300){
+      colour = 'red';
+      fillColour = '#FF0033';
+    }      
+  }
+  // console.log(data);
+  let recordedAtTime = new Date(data.RecordedAtTime);
+  let timeNow = new Date();
+  let timeSinceRecorded_ms = timeNow - recordedAtTime;
+  // console.log(timeSinceRecorded_ms/60000);
+  // if(data.){
+  // }
+
+  // Stale data - over 5 mins since recording?
+  if(timeSinceRecorded_ms > 300000){
+        colour = 'grey';
+        fillColour = '#666666';
+  }
 
   if(markers[data.VehicleRef]){
     let historyLine = L.polyline([markers[data.VehicleRef].getLatLng(), [data.Lat, data.Long]], {
@@ -150,7 +157,7 @@ function handleVehicleData(data){
   // markers[data.VehicleRef] = L.marker([data.Lat, data.Long]);
   // console.log(markers[data.VehicleRef]);
   // markers[data.VehicleRef].addToMap(map);
-  console.log(vehicles);
+  // console.log(vehicles);
 }
 
 function popupText(data){
@@ -171,6 +178,6 @@ function popupText(data){
    }
   
   let popup = description + time + delay;
-  console.log(popup);
+  // console.log(popup);
   return popup;
 }
