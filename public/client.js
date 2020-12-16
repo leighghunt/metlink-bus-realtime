@@ -104,6 +104,12 @@ function handleVehicleData(data){
         fillColour = '#FF0033';
       }      
     }
+    // console.log(data);
+    let recordedAtTime = new Date(data.RecordedAtTime);
+    let timeNow = new Date();
+    console.log(timeNow - recordedAtTime)/1000);
+    // if(data.){
+    // }
 
   if(markers[data.VehicleRef]){
     let historyLine = L.polyline([markers[data.VehicleRef].getLatLng(), [data.Lat, data.Long]], {
