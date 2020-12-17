@@ -89,7 +89,7 @@ socket.on('location', function (data) {
 function handleVehicleData(data){
 
   if(vehicles[data.VehicleRef] && vehicles[data.VehicleRef].RecordedAtTime == data.RecordedAtTime){
-    console.log('no update');
+    // console.log('no update');
     return;
   }
   
@@ -116,6 +116,11 @@ function handleVehicleData(data){
   if(timeSinceRecorded_ms > 300000){
         colour = 'grey';
         fillColour = '#666666';
+  }
+
+  // Really stale data - over 60 mins since recording - don't render
+  if(timeSinceRecorded_ms > 3600000){
+    return;
   }
 
   if(markers[data.VehicleRef]){
