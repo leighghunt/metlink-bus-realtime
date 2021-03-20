@@ -39,20 +39,20 @@ let url = 'https://www.metlink.org.nz/api/v1/ServiceLocation/';
 function callAPI(){
   console.log('Calling API....');
   
-  services.map(function(serviceId){
-    // console.log(url + serviceId);
+//   services.map(function(serviceId){
+//     // console.log(url + serviceId);
     
-    axios.get(url + serviceId)
-    .then(function (response) {
+//     axios.get(url + serviceId)
+//     .then(function (response) {
       
-      handleResponse(response.data);      
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
+//       handleResponse(response.data);      
+//     })
+//     .catch(function (error) {
+//       // handle error
+//       console.log(error);
+//     })
     
-  });
+//   });
   
   // console.log(vehicles);
  
