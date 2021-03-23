@@ -37,6 +37,8 @@ var trails = {};
 let url = 'https://api.opendata.metlink.org.nz/v1/gtfs-rt/vehiclepositions';
 
 
+// Updated API documentation at https://opendata.metlink.org.nz/getting-started
+
 function callAPI(){
   console.log('Calling API....');
   console.log(process.env.metlink_api_key)
