@@ -33,33 +33,34 @@ server.listen(process.env.PORT);
 var vehicles = {};
 var trails = {};
 
-let services = ['KPL', 'HVL', 'JVL', 'MEL', 'WRL', 60, 220, 210, 226, 236, 230, 250, 251, 260, 530, 441];
-let url = 'https://www.metlink.org.nz/api/v1/ServiceLocation/';
+// let services = ['KPL', 'HVL', 'JVL', 'MEL', 'WRL', 60, 220, 210, 226, 236, 230, 250, 251, 260, 530, 441];
+let url = 'https://api.opendata.metlink.org.nz/v1/gtfs-rt/vehiclepositions';
+
 
 function callAPI(){
   console.log('Calling API....');
-  
-//   services.map(function(serviceId){
-//     // console.log(url + serviceId);
+  console.log(process.env.metlink_api_key)
     
-//     axios.get(url + serviceId)
-//     .then(function (response) {
-      
-//       handleResponse(response.data);      
-//     })
-//     .catch(function (error) {
-//       // handle error
-//       console.log(error);
-//     })
-    
-//   });
+  axios.get(url, {
+  headers: {
+    'x-api-key': process.env.metlink_api_key
+  }})
+  .then(function (response) {
+
+    handleResponse(response.data);      
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
   
-  // console.log(vehicles);
+  console.log(vehicles);
  
 }
 
 function handleResponse(data){    
-  //console.log(data);
+  console.log(data);
   data.Services.forEach(function(service){
    console.log(service.ServiceID + ': ' + service.VehicleRef);
     
@@ -119,6 +120,6 @@ const KPL_JSON = '{"LastModified":"2019-07-18T15:00:09+12:00","Services":[{"Reco
 
 setTimeout(callAPI, 10000); // Avoid firing immediately so we don't balst the API and get throttled.
 //callAPI();
-setInterval(callAPI, 10000);
+setInterval(callAPI, 30000);
 
 console.log(vehicles);
