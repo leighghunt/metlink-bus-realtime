@@ -60,17 +60,22 @@ function callAPI(){
 }
 
 function handleResponse(data){    
+  
+  let recordedAtTime = Date(data["header"]["timestamp"]);
+  console.log(recordedAtTime);
+
   // console.log(data["entity"]);
-  data["entity"].forEach(function(entity){
-   // console.log(service.ServiceID + ': ' + service.VehicleRef);
+  data["entity"].slice(1).forEach(function(entity){
+    // console.log(service.ServiceID + ': ' + service.VehicleRef);
 
-   console.log(entity);
-
+    console.log(entity);
     
+  
+    let vehicleRef = entity["vehicle"]["vehicle"]["id"];
     let changeDetected = true;
-    if(vehicles[entity.VehicleRef]){
+    if(vehicles[vehicleRef]){
       // console.log(service.VehicleRef + ' already present')
-      if(vehicles[service.VehicleRef].RecordedAtTime == service.RecordedAtTime){
+      if(vehicles[vehicleRef].RecordedAtTime == recordedAtTime){
         // console.log(service.VehicleRef + ' time same ' + vehicles[service.VehicleRef].RecordedAtTime);
         changeDetected = false;
       } else
@@ -81,24 +86,24 @@ function handleResponse(data){
     }
 
     if(changeDetected){
-      vehicles[service.VehicleRef] = {
-        VehicleRef: service.VehicleRef,
-        ServiceID: service.ServiceID,
-        RecordedAtTime: service.RecordedAtTime,
-        Lat: service.Lat,
-        Long: service.Long,
-        DelaySeconds: service.DelaySeconds,
-        Bearing: service.Bearing,
-        DepartureTime: service.DepartureTime,
-        OriginStopID: service.OriginStopID,
-        OriginStopName: service.OriginStopName,
-        DestinationStopID: service.DestinationStopID,
-        DestinationStopName: service.DestinationStopName
+      vehicles[vehicleRef] = {
+        VehicleRef: vehicleRef,
+        ServiceID: entity.ServiceID,
+        RecordedAtTime: recordedAtTime,
+        Lat: entity["vehicle"]["position"]["latitude"],
+        Long: entity.Long,
+        DelaySeconds: entity.DelaySeconds,
+        Bearing: entity.Bearing,
+        DepartureTime: entity.DepartureTime,
+        OriginStopID: entity.OriginStopID,
+        OriginStopName: entity.OriginStopName,
+        DestinationStopID: entity.DestinationStopID,
+        DestinationStopName: entity.DestinationStopName
       }
     }
 
     // io.emit('location', {vehicle: vehicles[service.VehicleRef]});
-    io.emit('location', service); //{vehicle: service});
+    io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
 
   });
   
