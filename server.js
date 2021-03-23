@@ -88,17 +88,17 @@ function handleResponse(data){
     if(changeDetected){
       vehicles[vehicleRef] = {
         VehicleRef: vehicleRef,
-        ServiceID: entity.ServiceID,
+        // ServiceID: entity.ServiceID,      // get from trips?
         RecordedAtTime: recordedAtTime,
         Lat: entity["vehicle"]["position"]["latitude"],
-        Long: entity.Long,
-        DelaySeconds: entity.DelaySeconds,
-        Bearing: entity.Bearing,
-        DepartureTime: entity.DepartureTime,
-        OriginStopID: entity.OriginStopID,
-        OriginStopName: entity.OriginStopName,
-        DestinationStopID: entity.DestinationStopID,
-        DestinationStopName: entity.DestinationStopName
+        Long: entity["vehicle"]["position"]["longitude"],
+        // DelaySeconds: entity.DelaySeconds,
+        Bearing: entity["vehicle"]["position"]["bearing"],
+        DepartureTime: entity["vehicle"]["trip"]["start_time"],
+        // OriginStopID: entity.OriginStopID,
+        // OriginStopName: entity.OriginStopName,
+        // DestinationStopID: entity.DestinationStopID,
+        // DestinationStopName: entity.DestinationStopName
       }
     }
 
