@@ -60,12 +60,15 @@ function callAPI(){
 }
 
 function handleResponse(data){    
-  console.log(data);
-  data.Services.forEach(function(service){
-   console.log(service.ServiceID + ': ' + service.VehicleRef);
+  // console.log(data["entity"]);
+  data["entity"].forEach(function(entity){
+   // console.log(service.ServiceID + ': ' + service.VehicleRef);
+
+   console.log(entity);
+
     
     let changeDetected = true;
-    if(vehicles[service.VehicleRef]){
+    if(vehicles[entity.VehicleRef]){
       // console.log(service.VehicleRef + ' already present')
       if(vehicles[service.VehicleRef].RecordedAtTime == service.RecordedAtTime){
         // console.log(service.VehicleRef + ' time same ' + vehicles[service.VehicleRef].RecordedAtTime);
@@ -118,7 +121,7 @@ const KPL_JSON = '{"LastModified":"2019-07-18T15:00:09+12:00","Services":[{"Reco
 // setTimeout(function(){handleResponse(JSON.parse(KPL_JSON))}, 5000);
 // setInterval(function(){handleResponse(JSON.parse(KPL_JSON))}, 5000);
 
-setTimeout(callAPI, 10000); // Avoid firing immediately so we don't balst the API and get throttled.
+setTimeout(callAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 //callAPI();
 setInterval(callAPI, 30000);
 
