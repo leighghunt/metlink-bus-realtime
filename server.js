@@ -67,13 +67,15 @@ function handleResponse(data){
   console.log(recordedAtTime);
 
   // console.log(data["entity"]);
-  data["entity"].slice(1).forEach(function(entity){
+  data["entity"].forEach(function(entity){
     // console.log(service.ServiceID + ': ' + service.VehicleRef);
 
-    console.log(entity);
+    // console.log(entity);
+
     
   
     let vehicleRef = entity["vehicle"]["vehicle"]["id"];
+
     let changeDetected = true;
     if(vehicles[vehicleRef]){
       // console.log(service.VehicleRef + ' already present')
@@ -88,24 +90,33 @@ function handleResponse(data){
     }
 
     if(changeDetected){
-      vehicles[vehicleRef] = {
-        VehicleRef: vehicleRef,
-        // ServiceID: entity.ServiceID,      // get from trips?
-        RecordedAtTime: recordedAtTime,
-        Lat: entity["vehicle"]["position"]["latitude"],
-        Long: entity["vehicle"]["position"]["longitude"],
-        // DelaySeconds: entity.DelaySeconds,
-        Bearing: entity["vehicle"]["position"]["bearing"],
-        DepartureTime: entity["vehicle"]["trip"]["start_time"],
-        // OriginStopID: entity.OriginStopID,
-        // OriginStopName: entity.OriginStopName,
-        // DestinationStopID: entity.DestinationStopID,
-        // DestinationStopName: entity.DestinationStopName
+      console.log(vehicleRef);
+      
+      if(entity["vehicle"]["position"]["latitude"] != 0 || entity["vehicle"]["position"]["longitude"] != 0){
+
+        vehicles[vehicleRef] = {
+          VehicleRef: vehicleRef,
+          // ServiceID: entity.ServiceID,      // get from trips?
+          RecordedAtTime: recordedAtTime,
+          Lat: entity["vehicle"]["position"]["latitude"],
+          Long: entity["vehicle"]["position"]["longitude"],
+          // DelaySeconds: entity.DelaySeconds,
+          Bearing: entity["vehicle"]["position"]["bearing"],
+          DepartureTime: entity["vehicle"]["trip"]["start_time"],
+          // OriginStopID: entity.OriginStopID,
+          // OriginStopName: entity.OriginStopName,
+          // DestinationStopID: entity.DestinationStopID,
+          // DestinationStopName: entity.DestinationStopName
+        }
+
+        io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
+
+      } else {
+        console.log("ERRRrrrr....")
       }
     }
 
     // io.emit('location', {vehicle: vehicles[service.VehicleRef]});
-    io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
 
   });
   
