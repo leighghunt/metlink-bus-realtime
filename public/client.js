@@ -379,6 +379,13 @@ function getStopDepartures(stopNumber){
   stopDeparturesRequest.open('get', '/stopDepartures/' + stopNumber);
   stopDeparturesRequest.send();
 
+  
+  const stopDeparturesRequestOld = new XMLHttpRequest();
+  stopDeparturesRequestOld.onload = getStopDeparturesListener;
+  stopDeparturesRequestOld.open('get', '/stopDeparturesOld/' + stopNumber);
+  stopDeparturesRequestOld.send();
+
+
 }
 
 const getStopDeparturesListener = function() {

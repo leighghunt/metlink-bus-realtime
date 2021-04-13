@@ -22,7 +22,7 @@ var stops = {};
 let vehiclePositionURL = 'https://api.opendata.metlink.org.nz/v1/gtfs-rt/vehiclepositions';
 let stopsURL = 'https://api.opendata.metlink.org.nz/v1/gtfs/stops';
 let stopDeparturesURLOld = 'https://www.metlink.org.nz/api/v1/StopDepartures/'
-let stopDeparturesOld = 'https://www.metlink.org.nz/api/v1/StopDepartures/'
+let stopDeparturesURL = 'https://api.opendata.metlink.org.nz/v1/stop-predictions'
 
 
 
@@ -144,7 +144,7 @@ app.get('/stops', function(request, response) {
 app.get('/stopDeparturesOld/:stop', function(request, response) {
   console.log(request.params.stop);
 
-  axios.get(stopDeparturesURL + request.params.stop)
+  axios.get(stopDeparturesURLOld + request.params.stop)
   .then(function (apiResponse) {
     console.log(apiResponse.data)
    response.send(JSON.stringify(apiResponse.data));      
@@ -160,7 +160,10 @@ app.get('/stopDeparturesOld/:stop', function(request, response) {
 app.get('/stopDepartures/:stop', function(request, response) {
   console.log(request.params.stop);
 
-  axios.get(stopDeparturesURL + request.params.stop)
+  axios.get(stopDeparturesURL + "?stop_id=" + request.params.stop, {
+  headers: {
+    'x-api-key': process.env.metlink_api_key
+  }})
   .then(function (apiResponse) {
     console.log(apiResponse.data)
    response.send(JSON.stringify(apiResponse.data));      
