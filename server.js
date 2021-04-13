@@ -83,6 +83,7 @@ function handleVehiclePositionResponse(data){
           // OriginStopName: entity.OriginStopName,
           // DestinationStopID: entity.DestinationStopID,
           // DestinationStopName: entity.DestinationStopName
+          entity: entity
         }
 
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});

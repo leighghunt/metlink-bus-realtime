@@ -317,7 +317,7 @@ function handleStopsData(data){
       // fillOpacity: 0.5,
       radius: 5}).addTo(map)
       .bindPopup(popupStopText(data))
-      .on("popupopen", function(e){onPopupOpen(e, data.stop_id)}));
+      .on("popupopen", function(e){onPopupStopOpen(e, data.stop_id)}));
     
 }
 
@@ -350,7 +350,7 @@ function popupStopText(data){
   return data.stop_code + ": " + data.stop_name;
 }
 
-function onPopupOpen(data, stop_id){
+function onPopupStopOpen(data, stop_id){
   console.log("onPopupOpen")
 
   console.log(data)
@@ -380,10 +380,10 @@ function getStopDepartures(stopNumber){
   stopDeparturesRequest.send();
 
   
-  const stopDeparturesRequestOld = new XMLHttpRequest();
-  stopDeparturesRequestOld.onload = getStopDeparturesListener;
-  stopDeparturesRequestOld.open('get', '/stopDeparturesOld/' + stopNumber);
-  stopDeparturesRequestOld.send();
+//   const stopDeparturesRequestOld = new XMLHttpRequest();
+//   stopDeparturesRequestOld.onload = getStopDeparturesListener;
+//   stopDeparturesRequestOld.open('get', '/stopDeparturesOld/' + stopNumber);
+//   stopDeparturesRequestOld.send();
 
 
 }
@@ -392,8 +392,14 @@ const getStopDeparturesListener = function() {
   // parse our response to convert to JSON
   console.log('getStopDeparturesListener')
   let stopDepartures = JSON.parse(this.responseText);
+  let departures = stopDepartures.departures;
+  
   
   console.log(stopDepartures)
+  if(departures != null && departures.length>0){
+    console.log(departures[0])
+
+  }
 }
 //   let nextInboundDeparture = null;
 //   let nextInboundDepartureInfo = null;
