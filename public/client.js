@@ -26,6 +26,11 @@ const earthRadius = 6371
 const greatCircleDistance = angle => 2 * Math.PI * earthRadius * (angle / 360)
 
 function calcDistanceBetweenTwoPoints(locationX, locationY) {
+  // console.log("calcDistanceBetweenTwoPoints")
+  // console.log(locationX);
+
+  // console.log(locationY);
+
   return greatCircleDistance(centralSubtendedAngle(locationX, locationY))
 }  
 
@@ -100,6 +105,8 @@ console.log(vehicles);
 var allStops = [];
 var nearStops = [];
 
+var nearStopMarkers = [];
+
 // a helper function to call when our request for dreams is done
 const getVehiclesListener = function() {
   // parse our response to convert to JSON
@@ -158,26 +165,30 @@ function findNearestStops(){
     console.log(ourLocation)
     console.log(allStops[0]);
 
+    // allStops[0].distance=calcDistanceBetweenTwoPoints({latitude: allStops[0].stop_lat, longitude: allStops[0].stop_lon}, ourLocation);
+
+
+
     allStops.forEach(function (element, index, array) {
       // console.log(element)
       array[index].distance=calcDistanceBetweenTwoPoints({latitude: element.stop_lat, longitude: element.stop_lon}, ourLocation);
     });
 
 
-    console.log(nearStops.length)
-
     // restrict to those within 1km
     // apiResponse.data = apiResponse.data.filter(element => distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location) <= 1)
-    nearStops = allStops.filter(element => element.distance <= 10)
+    nearStops = allStops.filter(element => element.distance <= 1)
+    console.log(nearStops.length)
+
+
     
     console.log(allStops[0])
 
 
-  // for(var stop in stops){
-  //   handleStopsData(stops[stop]);
-  // }
-
-
+    for(var nearStop in nearStops){
+      // console.log(nearStop)
+      handleStopsData(nearStops[nearStop]);
+    }
     
   }
 }
@@ -275,7 +286,7 @@ function handleVehicleData(data){
 
 function handleStopsData(data){
 
-  stopMarkers[data.stop_id] = (L.circle([data.stop_lat, data.stop_lon], {
+  nearStopMarkers[data.stop_id] = (L.circle([data.stop_lat, data.stop_lon], {
       color: 'blue',
       // fillColor: fillColour,
       // fillOpacity: 0.5,
