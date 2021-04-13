@@ -136,10 +136,10 @@ app.get('/stops', function(request, response) {
 
 
 
-// setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
+setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 
 setTimeout(callStopsAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 
-// setInterval(callVehiclePositionAPI, 30000);
+setInterval(callVehiclePositionAPI, 30000);
 
 console.log(vehicles);
