@@ -374,7 +374,10 @@ function onPopupBusOpen(data, vehicleRef){
   console.log(data)
   
   console.log(vehicleRef)
-  console.log(vehicles[data.VehicleRef].entity)
+  console.log(vehicles[vehicleRef].entity)
+
+  // console.log(vehicles[vehicleRef])
+
 
   // getStopDepartures(stop_id)
   
