@@ -62,6 +62,9 @@ var markers= {};
 var trails = {};
 console.log(vehicles);
 
+var stopMarkers= {};
+
+
 // a helper function to call when our request for dreams is done
 const getVehiclesListener = function() {
   // parse our response to convert to JSON
@@ -74,11 +77,37 @@ const getVehiclesListener = function() {
   }
 }
 
-// request the dreams from our app's sqlite database
 const vehiclesRequest = new XMLHttpRequest();
 vehiclesRequest.onload = getVehiclesListener;
 vehiclesRequest.open('get', '/latest');
 vehiclesRequest.send();
+
+
+
+
+
+
+
+
+const getStopsListener = function() {
+  // parse our response to convert to JSON
+  console.log('getStopsListener')
+  let stops = JSON.parse(this.responseText);
+
+  // iterate through every dream and add it to our page
+  for(var stop in stops){
+    handleStopData(stop);
+  }
+}
+
+const stopsRequest = new XMLHttpRequest();
+stopsRequest.onload = getStopsListener;
+stopsRequest.open('get', '/stops');
+stopsRequest.send();
+
+
+
+
 
 
 socket.on('location', function (data) {
@@ -165,6 +194,23 @@ function handleVehicleData(data){
   // console.log(vehicles);
 }
 
+
+
+
+
+function handlStopData(data){
+
+  stopMarkers[data.stop_id] = (L.circle([data.stop_lat, data.stop_long], {
+      color: 'blue',
+      // fillColor: fillColour,
+      // fillOpacity: 0.5,
+      radius: 30}).addTo(map)
+      .bindPopup(popupStopText(data)));
+    
+}
+
+
+
 function popupText(data){
   // let now = new Date();
   // var seconds = (new Date(now) - new Date(data.RecordedAtTime))/1000;
@@ -185,4 +231,8 @@ function popupText(data){
   let popup = description + time + delay;
   // console.log(popup);
   return popup;
+}
+
+function popupStopText(data){
+  return data.stop_name;
 }

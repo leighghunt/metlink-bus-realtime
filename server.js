@@ -113,54 +113,26 @@ function callStopsAPI(){
 
 
 function handleStopsResponse(data){    
-  console.log(data);
-//   let recordedAtTime = Date(data["header"]["timestamp"]);
-//   console.log(recordedAtTime);
-
-//   data["entity"].forEach(function(entity){
+  console.log(data[0]);
+  data.forEach(function(stop){
+    stops[stop.stop_code] = stop;
+  })
   
-//     let vehicleRef = entity["vehicle"]["vehicle"]["id"];
+  console.log(stops["PORI"])
 
-//     let changeDetected = true;
-//     if(vehicles[vehicleRef]){
-//       if(vehicles[vehicleRef].RecordedAtTime == recordedAtTime){
-//         changeDetected = false;
-//       }
-//     }
-
-//     if(changeDetected){
-//       console.log(vehicleRef);
-      
-//       if(entity["vehicle"]["position"]["latitude"] != 0 || entity["vehicle"]["position"]["longitude"] != 0){
-
-//         vehicles[vehicleRef] = {
-//           VehicleRef: vehicleRef,
-//           // ServiceID: entity.ServiceID,      // get from trips?
-//           RecordedAtTime: recordedAtTime,
-//           Lat: entity["vehicle"]["position"]["latitude"],
-//           Long: entity["vehicle"]["position"]["longitude"],
-//           // DelaySeconds: entity.DelaySeconds,
-//           Bearing: entity["vehicle"]["position"]["bearing"],
-//           DepartureTime: entity["vehicle"]["trip"]["start_time"],
-//           // OriginStopID: entity.OriginStopID,
-//           // OriginStopName: entity.OriginStopName,
-//           // DestinationStopID: entity.DestinationStopID,
-//           // DestinationStopName: entity.DestinationStopName
-//         }
-
-//         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
-
-//       } else {
-//         console.log("ERRRrrrr....")
-//       }
-//     }
-//   });
 }
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/latest', function(request, response) {
   response.send(JSON.stringify(vehicles));
 });
+
+
+// http://expressjs.com/en/starter/basic-routing.html
+app.get('/stops', function(request, response) {
+  response.send(JSON.stringify(stops));
+});
+
 
 
 
