@@ -1,6 +1,39 @@
 // client-side js
 // run by the browser each time your view template is loaded
 
+// https://richlloydmiles.medium.com/calculate-the-distance-between-two-points-on-earth-using-javascript-38e12c9a0f52
+const degreesToRadians = degrees => degrees * (Math.PI / 180)
+const radiansToDegrees = radians => radians * (180 / Math.PI)
+const centralSubtendedAngle = (locationX, locationY) => {
+  const locationXLatRadians = degreesToRadians(locationX.latitude)
+  const locationYLatRadians = degreesToRadians(locationY.latitude)
+return radiansToDegrees(
+    Math.acos(
+      Math.sin(locationXLatRadians) * Math.sin(locationYLatRadians) +
+        Math.cos(locationXLatRadians) *
+          Math.cos(locationYLatRadians) *
+          Math.cos(
+            degreesToRadians(
+              Math.abs(locationX.longitude - locationY.longitude)
+            )
+       )
+    )
+  )
+}
+
+
+const earthRadius = 6371
+const greatCircleDistance = angle => 2 * Math.PI * earthRadius * (angle / 360)
+
+function calcDistanceBetweenTwoPoints(locationX, locationY) {
+  return greatCircleDistance(centralSubtendedAngle(locationX, locationY))
+}  
+
+
+
+
+
+
 console.log('hello world :o');
 
 var porirua = [-41.135461, 174.839714]
@@ -123,17 +156,21 @@ function findNearestStops(){
   if(ourLocation != {} && allStops != {}){
     console.log("OK...")
     console.log(ourLocation)
-    console.log(allStops["PARA"]);
+    console.log(allStops[0]);
 
     allStops.forEach(function (element, index, array) {
       // console.log(element)
-      array[index].distance=distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location);
+      array[index].distance=calcDistanceBetweenTwoPoints({latitude: element.stop_lat, longitude: element.stop_lon}, ourLocation);
     });
 
 
+    console.log(nearStops.length)
+
     // restrict to those within 1km
     // apiResponse.data = apiResponse.data.filter(element => distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location) <= 1)
-    nearStops = allStops.filter(element => element.distance <= 1)
+    nearStops = allStops.filter(element => element.distance <= 10)
+    
+    console.log(allStops[0])
 
 
   // for(var stop in stops){
