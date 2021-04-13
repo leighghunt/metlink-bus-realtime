@@ -363,7 +363,7 @@ function onPopupStopOpen(data, stop_id){
 
   console.log(stop_id)
 
-  getStopDepartures(stop_id)
+  getStopDepartures(stop_id, data.popup)
   
   
 }
@@ -390,11 +390,10 @@ function onPopupBusOpen(data, vehicleRef){
 
 
 
-function getStopDepartures(stopNumber){
-      .on("popupopen", function(e){onPopupStopOpen(e, data.stop_id)}));
-
+function getStopDepartures(stopNumber, popup){
   const stopDeparturesRequest = new XMLHttpRequest();
   stopDeparturesRequest.stopNumber = stopNumber;
+  stopDeparturesRequest.popup = popup;
   stopDeparturesRequest.onload = getStopDeparturesListener;
   stopDeparturesRequest.open('get', '/stopDepartures/' + stopNumber);
   stopDeparturesRequest.send();
@@ -416,10 +415,14 @@ const getStopDeparturesListener = function() {
   let departures = stopDepartures.departures;
   
   
-  console.log(stopDepartures)
+  // console.log(stopDepartures)
   if(departures != null && departures.length>0){
     console.log(departures[0])
-
+    this.popup.setContent("UPDATED")
+    
+    var now = new Date()
+    var expected = new Date(departures[0].arrival.expected==null?departures[0].arrival.aimed:departures[0].arrival.expected);
+    console.log(expected - now);
   }
 }
 //   let nextInboundDeparture = null;
