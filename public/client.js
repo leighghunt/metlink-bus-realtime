@@ -23,14 +23,13 @@ var tileLayerThunderforest = 'https://{s}.tile.thunderforest.com/' + theme + '/{
 
 var tileLayerUrl = tileLayerThunderforest;
 
+var ourLocation = {};
+
+
 L.tileLayer(tileLayerUrl, {
   opacity: 0.3,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-L.marker(poriruaCollege).addTo(map)
-    .bindPopup('Porirua College')
-    // .openPopup();
 
 map.locate({setView: false, maxZoom: 16});
 
@@ -41,6 +40,9 @@ function onLocationFound(e) {
 
     L.circle(e.latlng, radius).addTo(map)
           .bindPopup("You are within " + radius + " meters from this point");
+  
+    ourLocation = e;
+    findNearestStops();
 
 }
 
@@ -62,8 +64,8 @@ var markers= {};
 var trails = {};
 console.log(vehicles);
 
-var stopMarkers= {};
-
+var allStops = [];
+var nearStops = [];
 
 // a helper function to call when our request for dreams is done
 const getVehiclesListener = function() {
@@ -92,12 +94,23 @@ vehiclesRequest.send();
 const getStopsListener = function() {
   // parse our response to convert to JSON
   console.log('getStopsListener')
-  let stops = JSON.parse(this.responseText);
+  var data = JSON.parse(this.responseText);
 
-  // iterate through every dream and add it to our page
-  for(var stop in stops){
-    handleStopsData(stops[stop]);
+  for(var stop in data){
+    allStops.app [stop] = (stops[stop]);
   }
+
+  
+  // // iterate through every dream and add it to our page
+  // allStops = st
+  // for(var stop in stops){
+  //   handleStopsData(stops[stop]);
+  // }
+  
+  console.log(allStops["PORI"]);
+  findNearestStops();
+
+
 }
 
 const stopsRequest = new XMLHttpRequest();
@@ -106,6 +119,31 @@ stopsRequest.open('get', '/stops');
 stopsRequest.send();
 
 
+function findNearestStops(){
+  if(ourLocation != {} && allStops != {}){
+    console.log("OK...")
+    console.log(ourLocation)
+    console.log(allStops["PARA"]);
+
+    allStops.forEach(function (element, index, array) {
+      console.log(element)
+      // array[index].distance=distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location);
+    });
+
+
+    // restrict to those within 1km
+    // apiResponse.data = apiResponse.data.filter(element => distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location) <= 1)
+    nearStops = allStops.filter(element => element.distance <= 1)
+
+
+  // for(var stop in stops){
+  //   handleStopsData(stops[stop]);
+  // }
+
+
+    
+  }
+}
 
 
 
