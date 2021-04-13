@@ -96,7 +96,7 @@ const getStopsListener = function() {
 
   // iterate through every dream and add it to our page
   for(var stop in stops){
-    handleStopData(stop);
+    handleStopsData(stops[stop]);
   }
 }
 
@@ -198,13 +198,13 @@ function handleVehicleData(data){
 
 
 
-function handlStopData(data){
+function handleStopsData(data){
 
-  stopMarkers[data.stop_id] = (L.circle([data.stop_lat, data.stop_long], {
+  stopMarkers[data.stop_id] = (L.circle([data.stop_lat, data.stop_lon], {
       color: 'blue',
       // fillColor: fillColour,
       // fillOpacity: 0.5,
-      radius: 30}).addTo(map)
+      radius: 5}).addTo(map)
       .bindPopup(popupStopText(data)));
     
 }
