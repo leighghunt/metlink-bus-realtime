@@ -314,7 +314,8 @@ function handleStopsData(data){
       // fillColor: fillColour,
       // fillOpacity: 0.5,
       radius: 5}).addTo(map)
-      .bindPopup(popupStopText(data)));
+      .bindPopup(popupStopText(data))
+      .on("popupopen", onPopupOpen));
     
 }
 
@@ -343,6 +344,14 @@ function popupText(data){
 }
 
 function popupStopText(data){
-  console.log("popup")
+  // console.log("popup")
   return data.stop_code + ": " + data.stop_name;
+}
+
+function onPopupOpen(data){
+  console.log("onPopupOpen")
+
+  console.log(data)
+
+  
 }
