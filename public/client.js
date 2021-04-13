@@ -417,12 +417,16 @@ const getStopDeparturesListener = function() {
   
   // console.log(stopDepartures)
   if(departures != null && departures.length>0){
-    console.log(departures[0])
-    this.popup.setContent("UPDATED")
+    var nextDeparture = departures[0]
+    console.log(nextDeparture)
+    // this.popup.setContent("UPDATED")
     
-    var now = new Date()
-    var expected = new Date(departures[0].arrival.expected==null?departures[0].arrival.aimed:departures[0].arrival.expected);
-    console.log(expected - now);
+    // var now = new Date()
+    // var expected = new Date(departures[0].arrival.expected==null?departures[0].arrival.aimed:departures[0].arrival.expected);
+    // console.log(expected - now);
+    
+    var expected = new moment(nextDeparture.departure.expected==null?nextDeparture.departure.aimed:nextDeparture.arrival.expected);
+    this.popup.setContent("Service " + nextDeparture.service_id + " to " +  nextDeparture.destination.name + " is due " + expected.fromNow())
   }
 }
 //   let nextInboundDeparture = null;
