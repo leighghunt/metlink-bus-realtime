@@ -180,9 +180,25 @@ function findNearestStops(){
     nearStops = allStops.filter(element => element.distance <= 1)
     console.log(nearStops.length)
 
+    nearStops = nearStops.sort(function(a, b) {
+      
+      var distA = a.distance;
+      var distB = b.distance;
 
+      if (distA < distB) {
+        return -1;
+      }
+      if (distA > distB) {
+        return 1;
+      }
+
+      // names must be equal
+      return 0;
+    });
+
+    console.log(nearStops)
     
-    console.log(allStops[0])
+    // console.log(allStops[0])
 
 
     for(var nearStop in nearStops){
