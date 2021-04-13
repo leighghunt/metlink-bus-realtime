@@ -42,7 +42,7 @@ function callVehiclePositionAPI(){
     console.log(error);
   })
 
-  console.log(vehicles);
+  // console.log(vehicles);
 }
 
 function handleVehiclePositionResponse(data){    
@@ -84,8 +84,9 @@ function handleVehiclePositionResponse(data){
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
 
       } else {
-        console.log("ERRRrrrr....")
-        console.log(entity);
+        // console.log("ERRRrrrr....")
+        // console.log(entity);
+        // Ignore - sometimes it returns zero location
 
       }
     }
@@ -120,7 +121,7 @@ function handleStopsResponse(data){
     stops[stop.stop_code] = stop;
   })
   
-  console.log(stops["PORI"])
+  // console.log(stops["PORI"])
 
 }
 

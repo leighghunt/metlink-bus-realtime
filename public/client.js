@@ -201,10 +201,17 @@ function findNearestStops(){
     // console.log(allStops[0])
 
 
-    for(var nearStop in nearStops){
+//     for(var nearStop in nearStops){
+//       // console.log(nearStop)
+//       handleStopsData(nearStops[nearStop]);
+//     }
+
+
+    for(var stop in allStops){
       // console.log(nearStop)
-      handleStopsData(nearStops[nearStop]);
+      handleStopsData(allStops[stop]);
     }
+
     
   }
 }
