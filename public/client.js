@@ -1,3 +1,5 @@
+/* globals moment */
+
 // client-side js
 // run by the browser each time your view template is loaded
 
@@ -358,7 +360,213 @@ function onPopupOpen(data, stop_id){
 
   console.log(stop_id)
 
-
+  getStopDepartures(stop_id)
   
   
 }
+
+
+
+
+
+
+
+
+
+function getStopDepartures(stopNumber){
+  const stopDeparturesRequest = new XMLHttpRequest();
+  stopDeparturesRequest.onload = getStopDeparturesListener;
+  stopDeparturesRequest.open('get', '/stopDepartures/' + stopNumber);
+  stopDeparturesRequest.send();
+
+}
+
+const getStopDeparturesListener = function() {
+  // parse our response to convert to JSON
+  console.log('getStopDeparturesListener')
+  let stopDepartures = JSON.parse(this.responseText);
+  
+  console.log(stopDepartures)
+}
+//   let nextInboundDeparture = null;
+//   let nextInboundDepartureInfo = null;
+//   let nextOutboundDeparture = null;
+//   let nextOutboundDepartureInfo = null;
+
+//   let announcedInbound = false;
+//   let announcedOutbound = false;
+//   let announcementCutoffSeconds = 900;
+//   let now = new moment();
+  
+//   const includeSchoolBuses = $('#includeSchoolBuses').is(':checked')
+//   console.log(includeSchoolBuses);
+
+  
+//   // let listResults = document.getElementById('listResults');
+//   // listResults.style.display = 'block';
+//   // while (listResults.firstChild) {
+//   //   listResults.removeChild(listResults.firstChild);
+//   // }
+
+
+//   if(stopDepartures.Services){
+//     stopDepartures.Services.forEach(function(stopDeparture){
+
+//       // Are we ignoring School Buses?
+//       if(!includeSchoolBuses && stopDeparture.Service.Mode=="School"){
+//         return;
+//       }
+//       let expectedDeparture = new moment(stopDeparture.DisplayDeparture);
+      
+//       let inbound = stopDeparture.Direction == "Inbound";
+
+//       if(inbound){
+//         if(!nextInboundDeparture || expectedDeparture < nextInboundDeparture){
+//           nextInboundDeparture = expectedDeparture;
+//           nextInboundDepartureInfo = stopDeparture;
+//         }
+//       } else {
+//         if(!nextOutboundDeparture || expectedDeparture < nextOutboundDeparture){
+//           nextOutboundDeparture = expectedDeparture;
+//           nextOutboundDepartureInfo = stopDeparture;
+//         }
+//       }
+
+
+//       let calculatedDepartureSeconds = (expectedDeparture - now)/1000;
+
+//       // console.log('calculatedDepartureSeconds');
+//       // console.log(calculatedDepartureSeconds);
+//       // console.log('stopDeparture.DisplayDepartureSeconds')
+//       // console.log(stopDeparture.DisplayDepartureSeconds)
+
+
+//       if(calculatedDepartureSeconds < announcementCutoffSeconds){
+
+//         let message = describeService(stopDeparture);
+
+//         const speech = new SpeechSynthesisUtterance(message);
+//         speech.voice = selectedVoice;
+//         speechSynthesis.speak(speech);
+
+
+//         let displayMessage = stopDeparture.Service.Code
+//         + ' to ' + stopDeparture.DestinationStopName + ' '
+//         + new moment(stopDeparture.DisplayDeparture).format('LT')
+
+//         let node = document.createElement("LI");
+//         node.className = 'list-group-item list-group-item-action';
+//         var textnode = document.createTextNode(displayMessage);         // Create a text node
+//         node.appendChild(textnode);                              // Append the text to <li>
+//         listResults.appendChild(node);
+
+
+
+//         if(inbound==true)
+//         {
+//           announcedInbound = true;
+//         } else{
+//           announcedOutbound = true;
+//         }
+//       }    
+
+//     });
+
+//   }
+
+//   if(!announcedInbound || !announcedOutbound){
+//     let message;
+//     if(nextInboundDeparture==null && nextOutboundDeparture==null){
+//       message = "There are no services listed."
+//       console.log(message);
+//       const speech = new SpeechSynthesisUtterance(message);
+//       speech.voice = selectedVoice;
+//       speechSynthesis.speak(speech);
+//     } else {
+      
+//     }
+
+//     if(nextInboundDeparture){
+//       message = 'No Inbound departures in the next ' + moment.duration(announcementCutoffSeconds , "seconds").humanize();
+//       message += '. Next service is ' + describeService(nextInboundDepartureInfo);
+//       console.log(message);
+//       const speech = new SpeechSynthesisUtterance(message);
+//       speech.voice = selectedVoice;
+//       speechSynthesis.speak(speech);
+//     } 
+
+//     if(nextOutboundDeparture){
+//       message = 'No Outbound departures in the next ' + moment.duration(announcementCutoffSeconds , "seconds").humanize();
+//       message += '. Next service is ' + describeService(nextOutboundDepartureInfo);
+//       console.log(message);
+//       const speech = new SpeechSynthesisUtterance(message);
+//       speech.voice = selectedVoice;
+//       speechSynthesis.speak(speech);
+//     } 
+
+//   }
+
+
+function describeService(service){
+
+  let now = new moment();
+  let expectedDeparture = new moment(service.DisplayDeparture);
+  let calculatedDepartureSeconds = (expectedDeparture - now)/1000;
+
+  let message;
+  if(service.Service.Mode.toUpperCase() == 'BUS'){
+    message = 'The ' + service.Service.Code 
+              /* + ' from "' + service.OriginStopName + '"'*/  
+              + ' to "' + service.DestinationStopName + '"'
+              + ' is departing in ' + moment.duration(calculatedDepartureSeconds, "seconds").humanize();
+  } else
+  {
+    if(service.Service.Mode.toUpperCase() == 'SCHOOL'){
+      message = 'The School Bus departing in ' + moment.duration(calculatedDepartureSeconds, "seconds").humanize();
+    } else
+    {
+      message = 'The '  + service.Service.Mode
+                /* + ' from "' + service.OriginStopName + '"'*/ 
+                + ' to "' + service.DestinationStopName + '"'
+                + ' is departing in ' + moment.duration(calculatedDepartureSeconds, "seconds").humanize();
+    }
+  }
+  let calculatedDelay = (new moment(service.AimedDeparture) - new moment(service.DisplayDeparture))/1000;
+  
+  if(calculatedDelay > 60 || service.DepartureStatus == 'delayed'){
+    message += ". It's " + moment.duration(calculatedDelay, "seconds").humanize() + " late.";
+    
+  }
+
+  console.log(message);
+
+  message = message.replace(/WgtnStn/gi, 'Wellington')
+  message = message.replace(/WELL-All stops/gi, 'Wellington (all stops)')
+  message = message.replace(/JOHN-All stops/gi, 'Johnsonville (all stops)')
+  message = message.replace(/UPPE/gi, 'Upper Hutt')
+  message = message.replace(/WaikanaeStn/gi, 'Whycan-i')
+  message = message.replace(/WAIK - All stops/gi, 'Whycan-i (all stops)')
+  message = message.replace(/WAIK-All stops/gi, 'Whycan-i (all stops)')
+  message = message.replace(/Waikanae/gi, 'whycan-i')
+  message = message.replace(/Papakowhai/gi, 'pahpah-co fi')
+  message = message.replace(/Paremata/gi, 'Para-mata')
+  message = message.replace(/Whitby-NavigationDr/gi, 'Whitby, Navigation Drive')
+  message = message.replace(/Porirua/gi, 'Poory Rua')
+  message = message.replace(/RaumatiBchShops-Rau/gi, 'Row mati Beach Shops')
+  message = message.replace(/Raumati/gi, 'Row mati')
+  message = message.replace(/ParaparaumuStn-/gi, 'Para Para Umu Station ')
+  message = message.replace(/Paraparaumu/gi, 'Para Para Umu')
+  message = message.replace(/MELL - All stops/gi, 'Melling (all stops)')
+  message = message.replace(/PORI - All stops/gi, 'Poory Rua (all stops)')
+  message = message.replace(/TAIT - All stops\*/gi, 'Taita (all stops)')
+  
+
+  message = message.replace(/KapitiHealthCtr \(op/gi, 'Kapiti Health Centre')
+  // message = message.replace(/Paekakariki/gi, 'Para Para Umu')
+  
+
+  console.log(message);
+  
+  return message;
+}
+
