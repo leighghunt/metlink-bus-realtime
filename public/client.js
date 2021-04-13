@@ -97,7 +97,7 @@ const getStopsListener = function() {
   var data = JSON.parse(this.responseText);
 
   for(var stop in data){
-    allStops.app [stop] = (stops[stop]);
+    allStops.push(data[stop]);
   }
 
   
@@ -126,8 +126,8 @@ function findNearestStops(){
     console.log(allStops["PARA"]);
 
     allStops.forEach(function (element, index, array) {
-      console.log(element)
-      // array[index].distance=distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location);
+      // console.log(element)
+      array[index].distance=distanceBetweenLocations.calc({latitude: element.stop_lat, longitude: element.stop_lon}, location);
     });
 
 
