@@ -62,7 +62,7 @@ function handleVehiclePositionResponse(data){
     }
 
     if(changeDetected){
-      console.log(vehicleRef);
+      // console.log(vehicleRef);
       
       if(entity["vehicle"]["position"]["latitude"] != 0 || entity["vehicle"]["position"]["longitude"] != 0){
 
@@ -85,6 +85,8 @@ function handleVehiclePositionResponse(data){
 
       } else {
         console.log("ERRRrrrr....")
+        console.log(entity);
+
       }
     }
   });

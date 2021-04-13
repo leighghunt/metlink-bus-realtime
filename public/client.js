@@ -336,5 +336,6 @@ function popupText(data){
 }
 
 function popupStopText(data){
-  return data.stop_name;
+  console.log("popup")
+  return data.stop_code + ": " + data.stop_name;
 }
