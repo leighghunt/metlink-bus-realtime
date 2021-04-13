@@ -315,7 +315,7 @@ function handleStopsData(data){
       // fillOpacity: 0.5,
       radius: 5}).addTo(map)
       .bindPopup(popupStopText(data))
-      .on("popupopen", onPopupOpen));
+      .on("popupopen", function(e){onPopupOpen(e, data.stop_id)}));
     
 }
 
@@ -348,10 +348,17 @@ function popupStopText(data){
   return data.stop_code + ": " + data.stop_name;
 }
 
-function onPopupOpen(data){
+function onPopupOpen(data, stop_id){
   console.log("onPopupOpen")
 
   console.log(data)
+  
+  var d = new Date()
+  data.popup.setContent("UPDATING...")
 
+  console.log(stop_id)
+
+
+  
   
 }
