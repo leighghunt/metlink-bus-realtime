@@ -294,7 +294,10 @@ function handleVehicleData(data){
       fillColor: fillColour,
       fillOpacity: 0.5,
       radius: 30}).addTo(map)
-      .bindPopup(popupText(data)));
+      .bindPopup(popupText(data))
+      .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
+
+     );
     
   }
 
@@ -365,6 +368,20 @@ function onPopupStopOpen(data, stop_id){
   
 }
 
+function onPopupBusOpen(data, vehicleRef){
+  console.log("onPopupBusOpen")
+
+  console.log(data)
+  
+  console.log(vehicleRef)
+  console.log(vehicles[data.VehicleRef].entity)
+
+  // getStopDepartures(stop_id)
+  
+  
+}
+
+
 
 
 
@@ -375,7 +392,7 @@ function onPopupStopOpen(data, stop_id){
 
 function getStopDepartures(stopNumber){
   const stopDeparturesRequest = new XMLHttpRequest();
-  stopDeparturesRequest.onload = getStopDeparturesListener;
+  stopDeparturesRequest.onload = function(){getStopDeparturesListener(stopNumber)};
   stopDeparturesRequest.open('get', '/stopDepartures/' + stopNumber);
   stopDeparturesRequest.send();
 
@@ -388,9 +405,10 @@ function getStopDepartures(stopNumber){
 
 }
 
-const getStopDeparturesListener = function() {
+const getStopDeparturesListener = function(stopNumber) {
   // parse our response to convert to JSON
   console.log('getStopDeparturesListener')
+  console.log(stopNumber)
   let stopDepartures = JSON.parse(this.responseText);
   let departures = stopDepartures.departures;
   
