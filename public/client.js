@@ -391,8 +391,11 @@ function onPopupBusOpen(data, vehicleRef){
 
 
 function getStopDepartures(stopNumber){
+      .on("popupopen", function(e){onPopupStopOpen(e, data.stop_id)}));
+
   const stopDeparturesRequest = new XMLHttpRequest();
-  stopDeparturesRequest.onload = function(){getStopDeparturesListener(stopNumber)};
+  stopDeparturesRequest.stopNumber = stopNumber;
+  stopDeparturesRequest.onload = getStopDeparturesListener;
   stopDeparturesRequest.open('get', '/stopDepartures/' + stopNumber);
   stopDeparturesRequest.send();
 
@@ -405,10 +408,10 @@ function getStopDepartures(stopNumber){
 
 }
 
-const getStopDeparturesListener = function(stopNumber) {
+const getStopDeparturesListener = function() {
   // parse our response to convert to JSON
   console.log('getStopDeparturesListener')
-  console.log(stopNumber)
+  console.log(this.stopNumber)
   let stopDepartures = JSON.parse(this.responseText);
   let departures = stopDepartures.departures;
   
