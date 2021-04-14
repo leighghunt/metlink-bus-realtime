@@ -377,6 +377,34 @@ function onPopupBusOpen(data, vehicleRef){
 
   console.log(data)
   
+  let time = new Date(data.RecordedAtTime).toLocaleTimeString();
+  let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
+  
+  let description = 'Bus ' + data.ServiceID + ' (' + data.VehicleRef + ')\n' 
+  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(data.ServiceID)){
+    description = "(" + new Date(data.DepartureTime).toLocaleTimeString() + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
+   }
+
+// {
+// 	id: "2e339e44-dd99-4f28-92ee-ef8bf20d7aa9",
+// 	vehicle: {
+// 		trip: {
+// 			schedule_relationship: 0,
+// 			start_time: "13:50:00",
+// 			trip_id: "HVL__0__3616__RAIL__Rail_MTuWThF-XHol_1"
+// 		},
+// 		vehicle: {
+// 			id: "4268"
+// 		},
+// 		position: {
+// 			bearing: 18,
+// 			latitude: -41.2346764,
+// 			longitude: 174.8351746
+// 		}
+// 	}
+// }  
+  data.popup.setContent()
+  
   console.log(vehicleRef)
   console.log(vehicles[vehicleRef].entity)
 
