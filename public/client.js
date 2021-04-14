@@ -460,8 +460,9 @@ const getStopDeparturesListener = function() {
     // var expected = new Date(departures[0].arrival.expected==null?departures[0].arrival.aimed:departures[0].arrival.expected);
     // console.log(expected - now);
     
-    var expected = new moment(nextDeparture.departure.expected==null?nextDeparture.departure.aimed:nextDeparture.arrival.expected);
-    this.popup.setContent("Service " + nextDeparture.service_id + " to " +  nextDeparture.destination.name + " is due " + expected.fromNow())
+    var expected = new moment(nextDeparture.departure.expected==null?nextDeparture.departure.aimed:nextDeparture.departure.expected);
+    this.popup.setContent("Service " + nextDeparture.service_id + " to " +  nextDeparture.destination.name + " is due " + expected.fromNow() + "\n"
+                         + " " + nextDeparture.status + " " + nextDeparture.delay)
   }
 }
 //   let nextInboundDeparture = null;
