@@ -286,7 +286,10 @@ function handleVehicleData(data){
     markers[data.VehicleRef].setStyle({
       color: colour,
       fillColor: fillColour});
-    markers[data.VehicleRef]._popup.setContent(popupText(data));
+    markers[data.VehicleRef]
+      .bindPopup("BUS INFO")
+      .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)});
+      // ._popup.setContent(popupText(data));
   } else
   {
     markers[data.VehicleRef] = (L.circle([data.Lat, data.Long], {
@@ -294,7 +297,8 @@ function handleVehicleData(data){
       fillColor: fillColour,
       fillOpacity: 0.5,
       radius: 30}).addTo(map)
-      .bindPopup(popupText(data))
+      // .bindPopup(popupText(data))
+      .bindPopup("BUS INFO")
       .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
 
      );
