@@ -403,7 +403,7 @@ function onPopupBusOpen(data, vehicleRef){
 // 		}
 // 	}
 // }  
-  data.popup.setContent()
+  data.popup.setContent("Service " + vehicles[vehicleRef].entity.vehicle.vehicle.id + " " + vehicles[vehicleRef].entity.vehicle.trip.trip_id)
   
   console.log(vehicleRef)
   console.log(vehicles[vehicleRef].entity)
