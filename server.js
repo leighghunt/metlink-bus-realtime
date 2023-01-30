@@ -184,6 +184,7 @@ setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don'
 
 setTimeout(callStopsAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 
-setInterval(callVehiclePositionAPI, 30000);
+// setInterval(callVehiclePositionAPI, 30000);
+setInterval(callVehiclePositionAPI, 1000);
 
 console.log(vehicles);
