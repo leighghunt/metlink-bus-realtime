@@ -275,7 +275,7 @@ function handleVehicleData(data){
     let opacity = 1;
     for(var index = trails[data.VehicleRef].length - 1;index >=0; --index){
       trails[data.VehicleRef][index].setStyle({opacity:opacity});
-      opacity -= 0.1;
+      opacity -= 0.05;
       if(opacity<=0){
         map.removeLayer(trails[data.VehicleRef].shift());        
       }
