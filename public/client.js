@@ -237,8 +237,8 @@ function handleVehicleData(data){
   let colour = 'green';
   let fillColour = '#3f0';
   
-  console.log("handleVehicleData")
-  console.log(data.DelaySeconds)
+  // console.log("handleVehicleData")
+  // console.log(data.DelaySeconds)
   
   if(data.DelaySeconds>60){
     colour = 'yellow';
@@ -380,7 +380,11 @@ function onPopupStopOpen(data, stop_id){
 function onPopupBusOpen(data, vehicleRef){
   console.log("onPopupBusOpen")
 
-  console.log(data)
+  // console.log(data)
+  
+  var vehicle = vehicles[vehicleRef].entity.vehicle;
+  var trip = vehicles[vehicleRef].entity.vehicle.trip;
+  var route = 
   
   let time = new Date(data.RecordedAtTime).toLocaleTimeString();
   let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
@@ -408,10 +412,11 @@ function onPopupBusOpen(data, vehicleRef){
 // 		}
 // 	}
 // }  
-  data.popup.setContent("Service " + vehicles[vehicleRef].entity.vehicle.vehicle.id + " " + vehicles[vehicleRef].entity.vehicle.trip.trip_id)
+  // data.popup.setContent("Service " + vehicles[vehicleRef].entity.vehicle.vehicle.id + " " + vehicles[vehicleRef].entity.vehicle.trip.trip_id)
+  data.popup.setContent(description);
   
-  console.log(vehicleRef)
-  console.log(vehicles[vehicleRef].entity)
+  // console.log(vehicleRef)
+  // console.log(vehicles[vehicleRef].entity)
 
   // console.log(vehicles[vehicleRef])
 
