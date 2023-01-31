@@ -384,15 +384,20 @@ function onPopupBusOpen(data, vehicleRef){
   
   var vehicle = vehicles[vehicleRef].entity.vehicle;
   var trip = vehicles[vehicleRef].entity.vehicle.trip;
-  var route = 
+  var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
   
-  let time = new Date(data.RecordedAtTime).toLocaleTimeString();
+  
+  // let time = new Date(data.RecordedAtTime).toLocaleTimeString();
   let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
   
-  let description = 'Bus ' + data.ServiceID + ' (' + data.VehicleRef + ')\n' 
-  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(data.ServiceID)){
-    description = "(" + new Date(data.DepartureTime).toLocaleTimeString() + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
-   }
+  let description = 'Bus ' + route + ' (' + vehicleRef + ')\n' + delay
+  
+  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+    description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
+  }
+  // if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+  //   description = "(" + trip.start_time + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
+  //  }
 
 // {
 // 	id: "2e339e44-dd99-4f28-92ee-ef8bf20d7aa9",
