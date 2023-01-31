@@ -301,9 +301,10 @@ function handleVehicleData(data){
       fillColor: fillColour,
       fillOpacity: 0.5,
       radius: 30}).addTo(map)
-      // .bindPopup(popupText(data))
-      .bindPopup("Getting info...")
-      .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
+      .bindPopup(popupText(data))
+                                
+      // .bindPopup("Getting info...")
+      // .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
 
      );
     
@@ -335,27 +336,27 @@ function handleStopsData(data){
 
 
 
-function popupText(data){
-  // let now = new Date();
-  // var seconds = (new Date(now) - new Date(data.RecordedAtTime))/1000;
-  // let age = Math.round(seconds) + 's';
-  // if (seconds > 60){
-  //   age = Math.round(seconds/60) + 'm';
-  // }
-  // return data.ServiceID + ': ' + data.VehicleRef + ' ' + age
+// function popupText(data){
+//   // let now = new Date();
+//   // var seconds = (new Date(now) - new Date(data.RecordedAtTime))/1000;
+//   // let age = Math.round(seconds) + 's';
+//   // if (seconds > 60){
+//   //   age = Math.round(seconds/60) + 'm';
+//   // }
+//   // return data.ServiceID + ': ' + data.VehicleRef + ' ' + age
   
-  let time = new Date(data.RecordedAtTime).toLocaleTimeString();
-  let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
+//   let time = new Date(data.RecordedAtTime).toLocaleTimeString();
+//   let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
   
-  let description = 'Bus ' + data.ServiceID + ' (' + data.VehicleRef + ')\n' 
-  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(data.ServiceID)){
-    description = "(" + new Date(data.DepartureTime).toLocaleTimeString() + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
-   }
+//   let description = 'Bus ' + data.ServiceID + ' (' + data.VehicleRef + ')\n' 
+//   if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(data.ServiceID)){
+//     description = "(" + new Date(data.DepartureTime).toLocaleTimeString() + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
+//    }
   
-  let popup = description + time + delay;
-  // console.log(popup);
-  return popup;
-}
+//   let popup = description + time + delay;
+//   // console.log(popup);
+//   return popup;
+// }
 
 function popupStopText(data){
   // console.log("popup")
@@ -377,20 +378,55 @@ function onPopupStopOpen(data, stop_id){
   
 }
 
+function popupText(vehicleRef){
+    
+  var vehicle = vehicles[vehicleRef].entity.vehicle;
+  var trip = vehicles[vehicleRef].entity.vehicle.trip;
+  var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
+  var delaySeconds = vehicles[vehicleRef].DelaySeconds
+  
+  
+  // let time = new Date(data.RecordedAtTime).toLocaleTimeString();
+  let delay = delaySeconds > 60? ' (Delayed ' + delaySeconds + 's) ':'';
+  
+  let transport = "Bus "
+
+  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+    transport = "Train "
+  }
+
+  let description = transport + delay + route + " (" + vehicleRef + ")"
+  
+  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+    description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
+  }
+
+  return description;
+}
+
+
 function onPopupBusOpen(data, vehicleRef){
   console.log("onPopupBusOpen")
+
 
   // console.log(data)
   
   var vehicle = vehicles[vehicleRef].entity.vehicle;
   var trip = vehicles[vehicleRef].entity.vehicle.trip;
   var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
+  var delaySeconds = vehicles[vehicleRef].DelaySeconds
   
   
   // let time = new Date(data.RecordedAtTime).toLocaleTimeString();
-  let delay = data.DelaySeconds > 60? ' (Delayed ' + data.DelaySeconds + 's)':'';
+  let delay = delaySeconds > 60? ' (Delayed ' + delaySeconds + 's) ':'';
   
-  let description = 'Bus ' + route + ' (' + vehicleRef + ')\n' + delay
+  let transport = "Bus "
+
+  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+    transport = "Train "
+  }
+
+  let description = transport + delay + route + " (" + vehicleRef + ")"
   
   if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
     description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
