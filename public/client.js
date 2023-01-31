@@ -236,6 +236,10 @@ function handleVehicleData(data){
   vehicles[data.VehicleRef] = data;
   let colour = 'green';
   let fillColour = '#3f0';
+  
+  console.log("handleVehicleData")
+  console.log(data.DelaySeconds)
+  
   if(data.DelaySeconds>60){
     colour = 'yellow';
     fillColour = '#ffff33';
@@ -258,8 +262,8 @@ function handleVehicleData(data){
         fillColour = '#666666';
   }
 
-  // Really stale data - over 60 mins since recording - don't render
-  if(timeSinceRecorded_ms > 3600000){
+  // Really stale data - over 15 mins since recording - don't render
+  if(timeSinceRecorded_ms > 15 * 60000){
     return;
   }
 
@@ -322,6 +326,7 @@ function handleStopsData(data){
       color: 'blue',
       // fillColor: fillColour,
       // fillOpacity: 0.5,
+      opacity: 0.2,
       radius: 5}).addTo(map)
       .bindPopup(popupStopText(data))
       .on("popupopen", function(e){onPopupStopOpen(e, data.stop_id)}));
