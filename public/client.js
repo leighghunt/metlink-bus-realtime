@@ -327,7 +327,7 @@ function handleVehicleData(data){
     markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
     {
         permanent: true, 
-        direction: 'auto',
+        direction: 'right',
         className: "labels"
     })      
     
