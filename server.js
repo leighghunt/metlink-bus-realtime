@@ -70,23 +70,37 @@ function handleVehiclePositionResponse(data){
       // console.log(vehicleRef);
       
       if(entity["vehicle"]["position"]["latitude"] != 0 || entity["vehicle"]["position"]["longitude"] != 0){
+        
+        var vehicle = vehicles[vehicleRef];
+        
+        if(vehicle!=null){
+          vehicle.RecordedAtTime = recordedAtTime
+          vehicle.Lat = entity["vehicle"]["position"]["latitude"]
+          vehicle.Long = entity["vehicle"]["position"]["longitude"]
+          // DelaySeconds: entity.DelaySeconds
+          vehicle.Bearing = entity["vehicle"]["position"]["bearing"]
+          vehicle.DepartureTime = entity["vehicle"]["trip"]["start_time"]          
+        } else {
+      
+          vehicles[vehicleRef] = {
+            VehicleRef: vehicleRef,
+            // ServiceID: entity.ServiceID,      // get from trips?
+            RecordedAtTime: recordedAtTime,
+            Lat: entity["vehicle"]["position"]["latitude"],
+            Long: entity["vehicle"]["position"]["longitude"],
+            // DelaySeconds: entity.DelaySeconds,
+            Bearing: entity["vehicle"]["position"]["bearing"],
+            DepartureTime: entity["vehicle"]["trip"]["start_time"],
+            // OriginStopID: entity.OriginStopID,
+            // OriginStopName: entity.OriginStopName,
+            // DestinationStopID: entity.DestinationStopID,
+            // DestinationStopName: entity.DestinationStopName
+            entity: entity
+          }
 
-        vehicles[vehicleRef] = {
-          VehicleRef: vehicleRef,
-          // ServiceID: entity.ServiceID,      // get from trips?
-          RecordedAtTime: recordedAtTime,
-          Lat: entity["vehicle"]["position"]["latitude"],
-          Long: entity["vehicle"]["position"]["longitude"],
-          // DelaySeconds: entity.DelaySeconds,
-          Bearing: entity["vehicle"]["position"]["bearing"],
-          DepartureTime: entity["vehicle"]["trip"]["start_time"],
-          // OriginStopID: entity.OriginStopID,
-          // OriginStopName: entity.OriginStopName,
-          // DestinationStopID: entity.DestinationStopID,
-          // DestinationStopName: entity.DestinationStopName
-          entity: entity
         }
 
+      
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
 
       } else {
@@ -159,7 +173,18 @@ function handleTripUpdatesResponse(data){
   console.log(data[0]);
   data.forEach(function(entity){
     // stops[stop.stop_code] = stop;
-    console.log(entity.trip_Update.vehicle)
+    
+    if(entity.trip_update!=null && entity.trip_update.stop_time_update!=null && entity.trip_update.stop_time_update.arrival!=null){
+      console.log(entity.trip_update.vehicle)
+      console.log(entity.trip_update.vehicle)
+
+      var vehicle = vehicles[entity.trip_update.vehicle];
+      if(vehicle!=null){
+        vehicle.DelaySeconds = entity.trip_update.stop_time_update.arrival.delay;
+      }
+    }
+    
+    
   })
   
   // console.log(stops["PORI"])
