@@ -23,6 +23,7 @@ let vehiclePositionURL = 'https://api.opendata.metlink.org.nz/v1/gtfs-rt/vehicle
 let stopsURL = 'https://api.opendata.metlink.org.nz/v1/gtfs/stops';
 let stopDeparturesURLOld = 'https://www.metlink.org.nz/api/v1/StopDepartures/'
 let stopDeparturesURL = 'https://api.opendata.metlink.org.nz/v1/stop-predictions'
+let tripUpdatesURL = "https://api.opendata.metlink.org.nz/v1/gtfs-rt/tripupdates"
 
 
 
@@ -130,6 +131,43 @@ function handleStopsResponse(data){
 
 }
 
+
+
+function callTripUpdatesAPI(){
+  console.log('callTripUpdatesAPI....');
+  // console.log(process.env.metlink_api_key)
+    
+  axios.get(tripUpdatesURL, {
+  headers: {
+    'x-api-key': process.env.metlink_api_key
+  }})
+  .then(function (response) {
+
+    handleTripUpdatesResponse(response.data.entity);      
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+
+  // console.log(vehicles);
+}
+
+
+
+
+function handleTripUpdatesResponse(data){    
+  console.log(data[0]);
+  data.forEach(function(entity){
+    // stops[stop.stop_code] = stop;
+    console.log(entity.trip_Update.vehicle)
+  })
+  
+  // console.log(stops["PORI"])
+
+}
+
+
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/latest', function(request, response) {
   response.send(JSON.stringify(vehicles));
@@ -183,6 +221,9 @@ app.get('/stopDepartures/:stop', function(request, response) {
 setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 
 setTimeout(callStopsAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
+
+setTimeout(callTripUpdatesAPI, 5000); // Avoid firing immediately so we don't balst the API and get throttled.
+
 
 // setInterval(callVehiclePositionAPI, 30000);
 setInterval(callVehiclePositionAPI, 5000);
