@@ -245,7 +245,7 @@ function handleVehicleData(data){
     fillColour = '#ffff33';
     if(data.DelaySeconds>150){
         colour = 'orange';
-        fillColour = '#FF0033';
+        fillColour = '#FFA500';
       if(data.DelaySeconds>300){
         colour = 'red';
         fillColour = '#FF0033';
@@ -316,14 +316,14 @@ function handleVehicleData(data){
      );
     
           
-      // if(!stale){
-      //   markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
-      //   {
-      //       permanent: true, 
-      //       direction: 'center',
-      //       className: "labels"
-      //   })      
-      // }
+      if(!stale){
+        markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
+        {
+            permanent: true, 
+            direction: 'center',
+            className: "labels"
+        })      
+      }
     
   }
 
@@ -335,6 +335,35 @@ function handleVehicleData(data){
 }
 
 
+
+
+
+
+var lastZoom;
+map.on('zoomend', function() {
+  var zoomThreashold=15
+  var zoom = map.getZoom();
+  if (zoom < zoomThreashold && (!lastZoom || lastZoom >= zoomThreashold)) {
+    map.eachLayer(function(l) {
+      if (l.getTooltip) {
+        var toolTip = l.getTooltip();
+        if (toolTip) {
+          this.map.closeTooltip(toolTip);
+        }
+      }
+    });
+  } else if (zoom >= zoomThreashold && (!lastZoom || lastZoom < zoomThreashold)) {
+    map.eachLayer(function(l) {
+      if (l.getTooltip) {
+        var toolTip = l.getTooltip();
+        if (toolTip) {
+          this.map.addLayer(toolTip);
+        }
+      }
+    });
+  }
+  lastZoom = zoom;
+})
 
 
 
