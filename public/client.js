@@ -243,10 +243,10 @@ function handleVehicleData(data){
   if(data.DelaySeconds>60){
     colour = 'yellow';
     fillColour = '#ffff33';
-    if(data.DelaySeconds>150){
+    if(data.DelaySeconds>300){
         colour = 'orange';
         fillColour = '#FFA500';
-      if(data.DelaySeconds>300){
+      if(data.DelaySeconds>600){
         colour = 'red';
         fillColour = '#FF0033';
       }      
