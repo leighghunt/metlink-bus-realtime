@@ -176,11 +176,13 @@ function handleTripUpdatesResponse(data){
     
     if(entity.trip_update!=null && entity.trip_update.stop_time_update!=null && entity.trip_update.stop_time_update.arrival!=null){
       console.log(entity.trip_update.vehicle)
-      console.log(entity.trip_update.vehicle)
+      console.log(entity.trip_update.stop_time_update.arrival.delay)
 
-      var vehicle = vehicles[entity.trip_update.vehicle];
+      var vehicle = vehicles[entity.trip_update.vehicle.id];
       if(vehicle!=null){
         vehicle.DelaySeconds = entity.trip_update.stop_time_update.arrival.delay;
+        
+        console.log(vehicles[entity.trip_update.vehicle.id]);
       }
     }
     
@@ -252,5 +254,6 @@ setTimeout(callTripUpdatesAPI, 5000); // Avoid firing immediately so we don't ba
 
 // setInterval(callVehiclePositionAPI, 30000);
 setInterval(callVehiclePositionAPI, 5000);
+setInterval(callTripUpdatesAPI, 60000); // Check Trip Updates every minute
 
 console.log(vehicles);
