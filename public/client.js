@@ -307,11 +307,9 @@ function handleVehicleData(data){
       fillColor: fillColour,
       fillOpacity: 0.5,
       radius: 30}).addTo(map)
-      .bindPopup(popupText(data.VehicleRef))      
-        
-                                
-      // .bindPopup("Getting info...")
-      // .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
+      // .bindPopup(popupText(data.VehicleRef))      
+      .bindPopup("Getting info...")
+      .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
 
      );
     
@@ -470,7 +468,9 @@ function tooltipText(vehicleRef){
 }
 
 
-// function onPopupBusOpen(data, vehicleRef){
+function onPopupBusOpen(data, vehicleRef){
+    data.popup.setContent(popupText(vehicleRef));
+
 //   console.log("onPopupBusOpen")
 
 
@@ -530,7 +530,7 @@ function tooltipText(vehicleRef){
 //   // getStopDepartures(stop_id)
   
   
-// }
+}
 
 
 

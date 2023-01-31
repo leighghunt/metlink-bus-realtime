@@ -84,7 +84,8 @@ function handleVehiclePositionResponse(data){
           vehicle.Long = entity["vehicle"]["position"]["longitude"]
           // DelaySeconds: entity.DelaySeconds
           vehicle.Bearing = entity["vehicle"]["position"]["bearing"]
-          vehicle.DepartureTime = entity["vehicle"]["trip"]["start_time"]          
+          vehicle.DepartureTime = entity["vehicle"]["trip"]["start_time"]         
+          vehicle.entity = entity;
         } else {
       
           vehicles[vehicleRef] = {
