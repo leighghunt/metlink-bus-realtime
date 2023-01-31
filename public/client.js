@@ -320,15 +320,24 @@ function handleVehicleData(data){
   let tooltip = markers[data.VehicleRef].getTooltip();
   if(tooltip == null || tooltip.getContent() != tooltipText(data.VehicleRef)){
     
+    
     if(tooltip!=null){
       markers[data.VehicleRef].unbindTooltip();  
     }
     markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
     {
         permanent: true, 
-        direction: 'center',
+        direction: 'auto',
         className: "labels"
     })      
+    
+    if(map.getZoom()<zoomTooltipThreashold){
+      
+        var toolTip = markers[data.VehicleRef].getTooltip();
+        if (toolTip) {
+          this.map.closeTooltip(toolTip);
+        }
+    }
   }
 
   
@@ -341,13 +350,13 @@ function handleVehicleData(data){
 
 
 
+var zoomTooltipThreashold=15
 
 
 var lastZoom;
 map.on('zoomend', function() {
-  var zoomThreashold=15
   var zoom = map.getZoom();
-  if (zoom < zoomThreashold && (!lastZoom || lastZoom >= zoomThreashold)) {
+  if (zoom < zoomTooltipThreashold && (!lastZoom || lastZoom >= zoomTooltipThreashold)) {
     map.eachLayer(function(l) {
       if (l.getTooltip) {
         var toolTip = l.getTooltip();
@@ -356,7 +365,7 @@ map.on('zoomend', function() {
         }
       }
     });
-  } else if (zoom >= zoomThreashold && (!lastZoom || lastZoom < zoomThreashold)) {
+  } else if (zoom >= zoomTooltipThreashold && (!lastZoom || lastZoom < zoomTooltipThreashold)) {
     map.eachLayer(function(l) {
       if (l.getTooltip) {
         var toolTip = l.getTooltip();

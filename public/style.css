@@ -14,7 +14,7 @@ html, body, #map {
 
 .leaflet-tooltip.labels {
   background-color: transparent;
-  color: white;
+/*   color: white; */
   border: transparent;
   box-shadow: none;
   font-weight: bold;
