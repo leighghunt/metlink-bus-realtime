@@ -316,15 +316,18 @@ function handleVehicleData(data){
      );
     
           
-      if(!stale){
-        markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
-        {
-            permanent: true, 
-            direction: 'center',
-            className: "labels"
-        })      
-      }
     
+  }
+  
+  let tooltip = markers[data.VehicleRef].getTooltip();
+  if(tooltip == null || tooltip.getContent() != tooltipText(data.VehicleRef)){
+    
+    markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
+    {
+        permanent: true, 
+        direction: 'center',
+        className: "labels"
+    })      
   }
 
   
