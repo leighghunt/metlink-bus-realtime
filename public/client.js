@@ -322,6 +322,9 @@ function handleVehicleData(data){
   let tooltip = markers[data.VehicleRef].getTooltip();
   if(tooltip == null || tooltip.getContent() != tooltipText(data.VehicleRef)){
     
+    if(tooltip!=null){
+      markers[data.VehicleRef].unbindTooltip();  
+    }
     markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
     {
         permanent: true, 
@@ -459,8 +462,11 @@ function tooltipText(vehicleRef){
   var vehicle = vehicles[vehicleRef].entity.vehicle;
   var trip = vehicles[vehicleRef].entity.vehicle.trip;
   var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
+  var delaySeconds = vehicles[vehicleRef].DelaySeconds
 
-  return route;
+  let delay = delaySeconds > 60? ' +' + delaySeconds + 's':'';
+
+  return route + delay;
 }
 
 

@@ -73,6 +73,11 @@ function handleVehiclePositionResponse(data){
         
         var vehicle = vehicles[vehicleRef];
         
+        if(vehicleRef==4230)
+        {
+          console.log(vehicle)
+        }
+        
         if(vehicle!=null){
           vehicle.RecordedAtTime = recordedAtTime
           vehicle.Lat = entity["vehicle"]["position"]["latitude"]
