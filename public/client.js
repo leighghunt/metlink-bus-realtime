@@ -243,10 +243,14 @@ function handleVehicleData(data){
   if(data.DelaySeconds>60){
     colour = 'yellow';
     fillColour = '#ffff33';
-    if(data.DelaySeconds>300){
-      colour = 'red';
-      fillColour = '#FF0033';
-    }      
+    if(data.DelaySeconds>150){
+        colour = 'orange';
+        fillColour = '#FF0033';
+      if(data.DelaySeconds>300){
+        colour = 'red';
+        fillColour = '#FF0033';
+      }      
+    }
   }
   // console.log(data);
   let recordedAtTime = new Date(data.RecordedAtTime);
@@ -311,14 +315,15 @@ function handleVehicleData(data){
 
      );
     
-                            
-      if(!stale){
-        markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
-        {
-            permanent: true, 
-            direction: 'right'
-        })      
-      }
+          
+      // if(!stale){
+      //   markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
+      //   {
+      //       permanent: true, 
+      //       direction: 'center',
+      //       className: "labels"
+      //   })      
+      // }
     
   }
 
