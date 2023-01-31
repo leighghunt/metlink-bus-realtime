@@ -441,11 +441,12 @@ function popupText(vehicleRef){
     transport = "Train "
   }
 
-  let description = transport + delay + route + " (" + vehicleRef + ")"
-  
-  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
-    description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
+  if(['QDF'].includes(route)){
+    transport = "Ferry "
   }
+
+  let description = transport + route + delay + " (" + vehicleRef + ")"
+  
 
   return description;
 }
