@@ -257,9 +257,11 @@ function handleVehicleData(data){
   // }
 
   // Stale data - over 5 mins since recording?
-  if(timeSinceRecorded_ms > 300000){
-        colour = 'grey';
-        fillColour = '#666666';
+  var stale = false
+  if(timeSinceRecorded_ms > 5 * 60 * 1000){
+    stale = true
+    colour = 'grey';
+    fillColour = '#666666';
   }
 
   // Really stale data - over 15 mins since recording - don't render
@@ -301,12 +303,22 @@ function handleVehicleData(data){
       fillColor: fillColour,
       fillOpacity: 0.5,
       radius: 30}).addTo(map)
-      .bindPopup(popupText(data))
+      .bindPopup(popupText(data.VehicleRef))      
+        
                                 
       // .bindPopup("Getting info...")
       // .on("popupopen", function(e){onPopupBusOpen(e, data.VehicleRef)})
 
      );
+    
+                            
+      if(!stale){
+        markers[data.VehicleRef].bindTooltip(tooltipText(data.VehicleRef), 
+        {
+            permanent: true, 
+            direction: 'right'
+        })      
+      }
     
   }
 
@@ -404,68 +416,77 @@ function popupText(vehicleRef){
   return description;
 }
 
-
-function onPopupBusOpen(data, vehicleRef){
-  console.log("onPopupBusOpen")
-
-
-  // console.log(data)
-  
+function tooltipText(vehicleRef){
+    
   var vehicle = vehicles[vehicleRef].entity.vehicle;
   var trip = vehicles[vehicleRef].entity.vehicle.trip;
   var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
-  var delaySeconds = vehicles[vehicleRef].DelaySeconds
-  
-  
-  // let time = new Date(data.RecordedAtTime).toLocaleTimeString();
-  let delay = delaySeconds > 60? ' (Delayed ' + delaySeconds + 's) ':'';
-  
-  let transport = "Bus "
 
-  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
-    transport = "Train "
-  }
-
-  let description = transport + delay + route + " (" + vehicleRef + ")"
-  
-  if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
-    description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
-  }
-  // if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
-  //   description = "(" + trip.start_time + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
-  //  }
-
-// {
-// 	id: "2e339e44-dd99-4f28-92ee-ef8bf20d7aa9",
-// 	vehicle: {
-// 		trip: {
-// 			schedule_relationship: 0,
-// 			start_time: "13:50:00",
-// 			trip_id: "HVL__0__3616__RAIL__Rail_MTuWThF-XHol_1"
-// 		},
-// 		vehicle: {
-// 			id: "4268"
-// 		},
-// 		position: {
-// 			bearing: 18,
-// 			latitude: -41.2346764,
-// 			longitude: 174.8351746
-// 		}
-// 	}
-// }  
-  // data.popup.setContent("Service " + vehicles[vehicleRef].entity.vehicle.vehicle.id + " " + vehicles[vehicleRef].entity.vehicle.trip.trip_id)
-  data.popup.setContent(description);
-  
-  // console.log(vehicleRef)
-  // console.log(vehicles[vehicleRef].entity)
-
-  // console.log(vehicles[vehicleRef])
-
-
-  // getStopDepartures(stop_id)
-  
-  
+  return route;
 }
+
+
+// function onPopupBusOpen(data, vehicleRef){
+//   console.log("onPopupBusOpen")
+
+
+//   // console.log(data)
+  
+//   var vehicle = vehicles[vehicleRef].entity.vehicle;
+//   var trip = vehicles[vehicleRef].entity.vehicle.trip;
+//   var route = trip.trip_id.substring(0, trip.trip_id.indexOf("_"));
+//   var delaySeconds = vehicles[vehicleRef].DelaySeconds
+  
+  
+//   // let time = new Date(data.RecordedAtTime).toLocaleTimeString();
+//   let delay = delaySeconds > 60? ' (Delayed ' + delaySeconds + 's) ':'';
+  
+//   let transport = "Bus "
+
+//   if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+//     transport = "Train "
+//   }
+
+//   let description = transport + delay + route + " (" + vehicleRef + ")"
+  
+//   if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+//     description = 'Train ' + route + ' (' + vehicleRef + ')\n' + delay
+//   }
+//   // if(['KPL', 'HVL', 'JVL', 'MEL', 'WRL'].includes(route)){
+//   //   description = "(" + trip.start_time + ' ' + data.OriginStopName + " -> " + data.DestinationStopName + ")\n";     
+//   //  }
+
+// // {
+// // 	id: "2e339e44-dd99-4f28-92ee-ef8bf20d7aa9",
+// // 	vehicle: {
+// // 		trip: {
+// // 			schedule_relationship: 0,
+// // 			start_time: "13:50:00",
+// // 			trip_id: "HVL__0__3616__RAIL__Rail_MTuWThF-XHol_1"
+// // 		},
+// // 		vehicle: {
+// // 			id: "4268"
+// // 		},
+// // 		position: {
+// // 			bearing: 18,
+// // 			latitude: -41.2346764,
+// // 			longitude: 174.8351746
+// // 		}
+// // 	}
+// // }  
+//   // data.popup.setContent("Service " + vehicles[vehicleRef].entity.vehicle.vehicle.id + " " + vehicles[vehicleRef].entity.vehicle.trip.trip_id)
+//   data.popup.setContent(description);
+  
+//   // console.log(vehicleRef)
+//   // console.log(vehicles[vehicleRef].entity)
+
+//   // console.log(vehicles[vehicleRef])
+
+
+//   // getStopDepartures(stop_id)
+  
+  
+// }
 
 
 
