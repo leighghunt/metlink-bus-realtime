@@ -18,15 +18,14 @@ server.listen(process.env.PORT);
 var vehicles = {};
 var trails = {};
 var stops = {};
+var routes = {};
 
 let vehiclePositionURL = 'https://api.opendata.metlink.org.nz/v1/gtfs-rt/vehiclepositions';
 let stopsURL = 'https://api.opendata.metlink.org.nz/v1/gtfs/stops';
 let stopDeparturesURLOld = 'https://www.metlink.org.nz/api/v1/StopDepartures/'
 let stopDeparturesURL = 'https://api.opendata.metlink.org.nz/v1/stop-predictions'
 let tripUpdatesURL = "https://api.opendata.metlink.org.nz/v1/gtfs-rt/tripupdates"
-
-
-
+let routesURL = "https://api.opendata.metlink.org.nz/v1/gtfs/routes"
 
 
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
@@ -77,31 +76,50 @@ function handleVehiclePositionResponse(data){
         {
           console.log(vehicle)
         }
+
+        var Lat = entity["vehicle"]["position"]["latitude"]
+        var Long = entity["vehicle"]["position"]["longitude"]
+        var Bearing = entity["vehicle"]["position"]["bearing"]
+        var DepartureTime = entity["vehicle"]["trip"]["start_time"]         
+        var Trip = entity["vehicle"]["trip"];
+        var RouteId = entity["vehicle"]["trip"]["route_id"];
+        var Route = Trip.trip_id.substring(0, Trip.trip_id.indexOf("_"));
         
+        // console.log("Route")
+        // console.log(Route)
+
         if(vehicle!=null){
           vehicle.RecordedAtTime = recordedAtTime
-          vehicle.Lat = entity["vehicle"]["position"]["latitude"]
-          vehicle.Long = entity["vehicle"]["position"]["longitude"]
+          vehicle.Lat = Lat
+          vehicle.Long = Long
           // DelaySeconds: entity.DelaySeconds
-          vehicle.Bearing = entity["vehicle"]["position"]["bearing"]
-          vehicle.DepartureTime = entity["vehicle"]["trip"]["start_time"]         
-          vehicle.entity = entity;
+          vehicle.Bearing = Bearing
+          vehicle.DepartureTime = DepartureTime
+          vehicle.entity = entity
+          vehicle.Trip = Trip
+          vehicle.RouteId = RouteId
+          vehicle.Route = Route
         } else {
       
           vehicles[vehicleRef] = {
             VehicleRef: vehicleRef,
             // ServiceID: entity.ServiceID,      // get from trips?
             RecordedAtTime: recordedAtTime,
-            Lat: entity["vehicle"]["position"]["latitude"],
-            Long: entity["vehicle"]["position"]["longitude"],
+            Lat: Lat,
+            Long: Long,
             // DelaySeconds: entity.DelaySeconds,
-            Bearing: entity["vehicle"]["position"]["bearing"],
-            DepartureTime: entity["vehicle"]["trip"]["start_time"],
+            Bearing: Bearing,
+            DepartureTime: DepartureTime,
             // OriginStopID: entity.OriginStopID,
             // OriginStopName: entity.OriginStopName,
             // DestinationStopID: entity.DestinationStopID,
             // DestinationStopName: entity.DestinationStopName
-            entity: entity
+            entity: entity,
+            Trip: Trip,
+            RouteId: RouteId,
+            Route: Route
+            // trip: entity.vehicle.trip,
+            // route: entity.vehicle.trip.substring(0, entity.vehicle.trip.indexOf("_"))
           }
 
         }
@@ -213,6 +231,46 @@ app.get('/stops', function(request, response) {
 });
 
 
+
+function callRoutesAPI(){
+  console.log('callRoutesAPI....');
+  // console.log(process.env.metlink_api_key)
+    
+  axios.get(routesURL, {
+  headers: {
+    'x-api-key': process.env.metlink_api_key
+  }})
+  .then(function (response) {
+
+    handleRoutesResponse(response.data);      
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+
+}
+
+
+
+
+function handleRoutesResponse(data){    
+  console.log(data[0]);
+  data.forEach(function(route){
+    routes[route.route_id] = route;
+  })
+  
+  // console.log(stops["PORI"])
+
+}
+
+
+
+// http://expressjs.com/en/starter/basic-routing.html
+app.get('/routes', function(request, response) {
+  response.send(JSON.stringify(routes));
+});
+
+
 app.get('/stopDeparturesOld/:stop', function(request, response) {
   console.log(request.params.stop);
 
@@ -253,13 +311,14 @@ app.get('/stopDepartures/:stop', function(request, response) {
 
 setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
 
-setTimeout(callStopsAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
+setTimeout(callStopsAPI, 1000); 
+setTimeout(callRoutesAPI, 1000); 
 
 setTimeout(callTripUpdatesAPI, 5000); // Avoid firing immediately so we don't balst the API and get throttled.
 
 
 // setInterval(callVehiclePositionAPI, 30000);
-setInterval(callVehiclePositionAPI, 5000);
+setInterval(callVehiclePositionAPI, 15000);
 setInterval(callTripUpdatesAPI, 60000); // Check Trip Updates every minute
 
 console.log(vehicles);
