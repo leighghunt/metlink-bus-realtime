@@ -318,7 +318,7 @@ setTimeout(callTripUpdatesAPI, 5000); // Avoid firing immediately so we don't ba
 
 
 // setInterval(callVehiclePositionAPI, 30000);
-setInterval(callVehiclePositionAPI, 15000);
+setInterval(callVehiclePositionAPI, 5000);
 setInterval(callTripUpdatesAPI, 60000); // Check Trip Updates every minute
 
 console.log(vehicles);
