@@ -33,7 +33,7 @@ let dataDir = "/Data"
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
 
 function callVehiclePositionAPI(){
-  // console.log('callVehiclePositionAPI....');
+  console.log('callVehiclePositionAPI....');
   // console.log(process.env.metlink_api_key)
     
   axios.get(vehiclePositionURL, {
