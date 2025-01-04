@@ -126,6 +126,7 @@ function handleVehiclePositionResponse(data){
 
         }
 
+        persistVehicle(vehicles[vehicleRef]);      
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
 
@@ -137,6 +138,11 @@ function handleVehiclePositionResponse(data){
       }
     }
   });
+}
+
+function persistVehicle(vehicle)
+{
+  // console.log(vehicle)
 }
 
 function callStopsAPI(){
