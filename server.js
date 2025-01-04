@@ -38,7 +38,7 @@ function callVehiclePositionAPI(){
     
   axios.get(vehiclePositionURL, {
   headers: {
-    'x-api-key': process.env.metlink_api_key
+    'x-api-key': process.env.METLINK_API_KEY
   }})
   .then(function (response) {
 
@@ -152,7 +152,7 @@ function callStopsAPI(){
     
   axios.get(stopsURL, {
   headers: {
-    'x-api-key': process.env.metlink_api_key
+    'x-api-key': process.env.METLINK_API_KEY
   }})
   .then(function (response) {
 
@@ -186,7 +186,7 @@ function callTripUpdatesAPI(){
     
   axios.get(tripUpdatesURL, {
   headers: {
-    'x-api-key': process.env.metlink_api_key
+    'x-api-key': process.env.METLINK_API_KEY
   }})
   .then(function (response) {
 
@@ -247,7 +247,7 @@ function callRoutesAPI(){
     
   axios.get(routesURL, {
   headers: {
-    'x-api-key': process.env.metlink_api_key
+    'x-api-key': process.env.METLINK_API_KEY
   }})
   .then(function (response) {
 
@@ -301,7 +301,7 @@ app.get('/stopDepartures/:stop', function(request, response) {
 
   axios.get(stopDeparturesURL + "?stop_id=" + request.params.stop, {
   headers: {
-    'x-api-key': process.env.metlink_api_key
+    'x-api-key': process.env.METLINK_API_KEY
   }})
   .then(function (apiResponse) {
     // console.log(apiResponse.data)
