@@ -33,7 +33,7 @@ let dataDir = "/Data"
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
 
 function callVehiclePositionAPI(){
-  console.log('callVehiclePositionAPI....');
+  // console.log('callVehiclePositionAPI....');
   // console.log(process.env.metlink_api_key)
     
   axios.get(vehiclePositionURL, {
@@ -45,7 +45,7 @@ function callVehiclePositionAPI(){
     handleVehiclePositionResponse(response.data);      
   })
   .catch(function (error) {
-    console.log(error);
+    console.error(error);
   })
 
   // console.log(vehicles);
@@ -54,7 +54,7 @@ function callVehiclePositionAPI(){
 function handleVehiclePositionResponse(data){    
   
   let recordedAtTime = Date(data["header"]["timestamp"]);
-  console.log(recordedAtTime);
+  // console.log(recordedAtTime);
 
   data["entity"].forEach(function(entity){
   
@@ -74,10 +74,10 @@ function handleVehiclePositionResponse(data){
         
         var vehicle = vehicles[vehicleRef];
         
-        if(vehicleRef==4230)
-        {
-          console.log(vehicle)
-        }
+        // if(vehicleRef==4230)
+        // {
+        //   console.log(vehicle)
+        // }
 
         var Lat = entity["vehicle"]["position"]["latitude"]
         var Long = entity["vehicle"]["position"]["longitude"]
@@ -142,11 +142,12 @@ function handleVehiclePositionResponse(data){
 
 function persistVehicle(vehicle)
 {
+  
   // console.log(vehicle)
 }
 
 function callStopsAPI(){
-  console.log('callStopsAPI....');
+  // console.log('callStopsAPI....');
   // console.log(process.env.metlink_api_key)
     
   axios.get(stopsURL, {
@@ -161,14 +162,14 @@ function callStopsAPI(){
     console.log(error);
   })
 
-  console.log(vehicles);
+  // console.log(vehicles);
 }
 
 
 
 
 function handleStopsResponse(data){    
-  console.log(data[0]);
+  // console.log(data[0]);
   data.forEach(function(stop){
     stops[stop.stop_code] = stop;
   })
@@ -180,7 +181,7 @@ function handleStopsResponse(data){
 
 
 function callTripUpdatesAPI(){
-  console.log('callTripUpdatesAPI....');
+  // console.log('callTripUpdatesAPI....');
   // console.log(process.env.metlink_api_key)
     
   axios.get(tripUpdatesURL, {
@@ -192,7 +193,7 @@ function callTripUpdatesAPI(){
     handleTripUpdatesResponse(response.data.entity);      
   })
   .catch(function (error) {
-    console.log(error);
+    console.error(error);
   })
 
   // console.log(vehicles);
@@ -202,19 +203,19 @@ function callTripUpdatesAPI(){
 
 
 function handleTripUpdatesResponse(data){    
-  console.log(data[0]);
+  // console.log(data[0]);
   data.forEach(function(entity){
     // stops[stop.stop_code] = stop;
     
     if(entity.trip_update!=null && entity.trip_update.stop_time_update!=null && entity.trip_update.stop_time_update.arrival!=null){
-      console.log(entity.trip_update.vehicle)
-      console.log(entity.trip_update.stop_time_update.arrival.delay)
+      // console.log(entity.trip_update.vehicle)
+      // console.log(entity.trip_update.stop_time_update.arrival.delay)
 
       var vehicle = vehicles[entity.trip_update.vehicle.id];
       if(vehicle!=null){
         vehicle.DelaySeconds = entity.trip_update.stop_time_update.arrival.delay;
         
-        console.log(vehicles[entity.trip_update.vehicle.id]);
+        // console.log(vehicles[entity.trip_update.vehicle.id]);
       }
     }
     
@@ -241,7 +242,7 @@ app.get('/stops', function(request, response) {
 
 
 function callRoutesAPI(){
-  console.log('callRoutesAPI....');
+  // console.log('callRoutesAPI....');
   // console.log(process.env.metlink_api_key)
     
   axios.get(routesURL, {
@@ -253,7 +254,7 @@ function callRoutesAPI(){
     handleRoutesResponse(response.data);      
   })
   .catch(function (error) {
-    console.log(error);
+    console.error(error);
   })
 
 }
@@ -262,7 +263,7 @@ function callRoutesAPI(){
 
 
 function handleRoutesResponse(data){    
-  console.log(data[0]);
+  // console.log(data[0]);
   data.forEach(function(route){
     routes[route.route_id] = route;
   })
@@ -280,35 +281,35 @@ app.get('/routes', function(request, response) {
 
 
 app.get('/stopDeparturesOld/:stop', function(request, response) {
-  console.log(request.params.stop);
+  // console.log(request.params.stop);
 
   axios.get(stopDeparturesURLOld + request.params.stop)
   .then(function (apiResponse) {
-    console.log(apiResponse.data)
+    // console.log(apiResponse.data)
    response.send(JSON.stringify(apiResponse.data));      
   })
   .catch(function (error) {
     // handle error
-    console.log(error);
+    // console.error(error);
     response.status(500).send(error)
   })  
 });
 
 
 app.get('/stopDepartures/:stop', function(request, response) {
-  console.log(request.params.stop);
+  // console.log(request.params.stop);
 
   axios.get(stopDeparturesURL + "?stop_id=" + request.params.stop, {
   headers: {
     'x-api-key': process.env.metlink_api_key
   }})
   .then(function (apiResponse) {
-    console.log(apiResponse.data)
+    // console.log(apiResponse.data)
    response.send(JSON.stringify(apiResponse.data));      
   })
   .catch(function (error) {
     // handle error
-    console.log(error);
+    // console.error(error);
     response.status(500).send(error)
   })  
 });
@@ -329,4 +330,4 @@ setTimeout(callTripUpdatesAPI, 5000); // Avoid firing immediately so we don't ba
 setInterval(callVehiclePositionAPI, 5000);
 setInterval(callTripUpdatesAPI, 60000); // Check Trip Updates every minute
 
-console.log(vehicles);
+// console.log(vehicles);
