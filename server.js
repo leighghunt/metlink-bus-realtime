@@ -27,6 +27,8 @@ let stopDeparturesURL = 'https://api.opendata.metlink.org.nz/v1/stop-predictions
 let tripUpdatesURL = "https://api.opendata.metlink.org.nz/v1/gtfs-rt/tripupdates"
 let routesURL = "https://api.opendata.metlink.org.nz/v1/gtfs/routes"
 
+let dataDir = "/Data"
+
 
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
 
