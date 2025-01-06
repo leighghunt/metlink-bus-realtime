@@ -145,6 +145,7 @@ function handleVehiclePositionResponse(data){
 }
 
 function persistVehicle(vehicle) {
+  try{
   // Get current date in New Zealand timezone
   const now = moment().tz('Pacific/Auckland');
   const dateStr = now.format('YYYYMMDD');
@@ -201,6 +202,13 @@ function persistVehicle(vehicle) {
 
   // Save updated data to disk in GeoJSON format
   fs.writeFileSync(filePath, JSON.stringify(geojsonData, null, 2));
+
+  }
+  catch(err){
+    console.error('Error persisting vehicle data for vehicle ' + vehicle.VehicleRef);
+    console.error(err)
+  }
+}
 }
 
 function callStopsAPI(){
