@@ -443,6 +443,12 @@ app.get('/geoJson/:vehicleRef/:dateStr', function(request, response) {
   response.send(gpx)
 });
 
+app.get('/geoJson/:vehicleRef', function(request, response) {
+  console.log(request.params.vehicleRef);
+  const gpx = geoJsonByVehicle(request.params.vehicleRef);
+  response.send(gpx)
+});
+
 
 
 setTimeout(callVehiclePositionAPI, 1000); // Avoid firing immediately so we don't balst the API and get throttled.
