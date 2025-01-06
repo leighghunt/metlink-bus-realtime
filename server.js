@@ -151,7 +151,7 @@ function persistVehicle(vehicle) {
   const vehicleRef = vehicle.VehicleRef; // Assuming vehicleRef is a property of vehicle
 
   // Create filename
-  const dirname = path.join(__dirname, dataDir);
+  const dirname = path.join(__dirname, dataDir, dateStr);
   if(dirname && !fs.existsSync(dirname)){
     fs.mkdirSync(dirname);
   }
