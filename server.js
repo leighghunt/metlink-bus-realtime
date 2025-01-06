@@ -436,9 +436,10 @@ app.get('/gpx/:vehicleRef', function(request, response) {
   response.send(gpx)
 });
 
-app.get('/geoJson/:vehicleRef', function(request, response) {
+app.get('/geoJson/:vehicleRef/:dateStr', function(request, response) {
   console.log(request.params.vehicleRef);
-  const gpx = geoJsonByVehicle(request.params.vehicleRef);
+  console.log(request.params.dateStr);
+  const gpx = geoJsonByVehicleAndDate(request.params.vehicleRef, request.params.dateStr);
   response.send(gpx)
 });
 
