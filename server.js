@@ -53,11 +53,13 @@ function callVehiclePositionAPI(){
     console.error(error);
   })
 
+  console.log('callVehiclePositionAPI DONE');
   // console.log(vehicles);
 }
 
 function handleVehiclePositionResponse(data){    
   
+  console.log('handleVehiclePositionResponse....');
   let recordedAtTime = Date(data["header"]["timestamp"]);
   // console.log(recordedAtTime);
 
@@ -131,10 +133,10 @@ function handleVehiclePositionResponse(data){
 
         }
 
-        persistVehicle(vehicles[vehicleRef]);      
+        // persistVehicle(vehicles[vehicleRef]);      
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
-
+        
       } else {
         // console.log("ERRRrrrr....")
         // console.log(entity);
@@ -143,6 +145,7 @@ function handleVehiclePositionResponse(data){
       }
     }
   });
+  console.log('handleVehiclePositionResponse DONE');
 }
 
 function persistVehicle(vehicle) {
