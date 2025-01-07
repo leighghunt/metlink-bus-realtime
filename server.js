@@ -37,6 +37,8 @@ let dataDir = "/Data"
 
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
 
+let persistCounter = 0
+
 function callVehiclePositionAPI(){
   console.log('callVehiclePositionAPI....');
   // console.log(process.env.metlink_api_key)
@@ -47,6 +49,7 @@ function callVehiclePositionAPI(){
   }})
   .then(function (response) {
 
+    ++persistCounter;
     handleVehiclePositionResponse(response.data);      
   })
   .catch(function (error) {
@@ -133,7 +136,9 @@ function handleVehiclePositionResponse(data){
 
         }
 
-        // persistVehicle(vehicles[vehicleRef]);      
+        if(persistCounter %12 == 0){
+          persistVehicle(vehicles[vehicleRef]);      
+        }
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
         
