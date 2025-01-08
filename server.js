@@ -158,59 +158,20 @@ function persistVehicleCSV(vehicle) {
     // Get current date in New Zealand timezone
     const now = moment().tz('Pacific/Auckland');
     const dateStr = now.format('YYYYMMDD');
-    const vehicleRef = vehicle.VehicleRef; // Assuming vehicleRef is a property of vehicle
+    // const vehicleRef = vehicle.VehicleRef; // Assuming vehicleRef is a property of vehicle
 
     // Create filename
-    const dirname = path.join(__dirname, dataDir, dateStr);
+    const dirname = path.join(__dirname, dataDir);
     if(dirname && !fs.existsSync(dirname)){
       fs.mkdirSync(dirname);
     }
-    const filename = `${dateStr}_.csv`;
+    const filename = `${dateStr}.csv`;
     const filePath = path.join(dirname, filename);
-
-    let geojsonData;
-
-    // Check if file exists
-    if (fs.existsSync(filePath)) {
-      // Read existing data
-      const existingData = fs.readFileSync(filePath);
-      geojsonData = JSON.parse(existingData);
-    } else {
-      // Create new GeoJSON structure
-      geojsonData = {
-        type: "FeatureCollection",
-        features: []
-      };
-    }
-
-    // Create a new feature for the vehicle
-    const feature = {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [vehicle.Long, vehicle.Lat]
-      },
-      properties: {
-        VehicleRef: vehicle.VehicleRef,
-        // // RecordedAtTime: vehicle.RecordedAtTime,
-        // Bearing: vehicle.Bearing,
-        // // entity: vehicle.entity,
-        // // Trip: vehicle.Trip,
-        // TripStartDate: vehicle.Trip.start_date,
-        // TripStartTime: vehicle.Trip.start_time,
-        TipId: vehicle.Trip.trip_id,
-        timestamp: vehicle.entity.vehicle.timestamp,
-        // RouteId: vehicle.RouteId,
-        DelaySeconds: vehicle.DelaySeconds,
-        // Route: vehicle.Route
-      }
-    };
-
-    // Append new vehicle data
-    geojsonData.features.push(feature);
-
+    const csvData = `${vehicle.VehicleRef}, ${vehicle.entity.vehicle.timestamp}, ${vehicle.Long}, ${vehicle.Lat}, ${vehicle.Trip.trip_id}, ${vehicle.DelaySeconds}\n`;
+    
+    
     // Save updated data to disk in GeoJSON format
-    fs.writeFileSync(filePath, JSON.stringify(geojsonData, null, 2));
+    fs.appendFileSync(filePath, csvData);
 
   }
   catch(err){

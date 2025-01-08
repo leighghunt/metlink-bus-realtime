@@ -1,0 +1,5400 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8156738,
+          -41.3160324
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 114,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304371,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8156891,
+          -41.3160362
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 114,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304436,
+        "DelaySeconds": 0,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8156586,
+          -41.316021
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 114,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304491,
+        "DelaySeconds": 0,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8156738,
+          -41.3160248
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 114,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304556,
+        "DelaySeconds": 0,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8159637,
+          -41.3162041
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 120,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304616,
+        "DelaySeconds": 0,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8183289,
+          -41.3171959
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 120,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304671,
+        "DelaySeconds": 12,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8221283,
+          -41.3133621
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 54,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304736,
+        "DelaySeconds": 12,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8246765,
+          -41.313179
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 90,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304791,
+        "DelaySeconds": 31,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8262177,
+          -41.3123169
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 78,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304856,
+        "DelaySeconds": 4,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8286285,
+          -41.3098183
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304912,
+        "DelaySeconds": 21,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8294373,
+          -41.3063087
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736304977,
+        "DelaySeconds": 65,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8292694,
+          -41.3037071
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305037,
+        "DelaySeconds": 82,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8292389,
+          -41.3002129
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 342,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305097,
+        "DelaySeconds": 82,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8284607,
+          -41.2983932
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305157,
+        "DelaySeconds": 77,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8286743,
+          -41.2975693
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305212,
+        "DelaySeconds": 82,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8279114,
+          -41.2946243
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305267,
+        "DelaySeconds": 83,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8244476,
+          -41.2981262
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 228,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305337,
+        "DelaySeconds": 127,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8205414,
+          -41.301075
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305397,
+        "DelaySeconds": 134,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8200378,
+          -41.3033981
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305457,
+        "DelaySeconds": 137,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8174438,
+          -41.3062744
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 162,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305512,
+        "DelaySeconds": 131,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8145142,
+          -41.3089981
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 210,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305577,
+        "DelaySeconds": 132,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.813858,
+          -41.3119583
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305638,
+        "DelaySeconds": 142,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8126678,
+          -41.3148651
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305698,
+        "DelaySeconds": 143,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8095703,
+          -41.316555
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305753,
+        "DelaySeconds": 123,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8027496,
+          -41.3181534
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 210,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305818,
+        "DelaySeconds": 123,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7980042,
+          -41.3185043
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 282,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305878,
+        "DelaySeconds": 123,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7962494,
+          -41.3178749
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 342,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305943,
+        "DelaySeconds": 143,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7956848,
+          -41.317215
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 312,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736305998,
+        "DelaySeconds": 148,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7955017,
+          -41.3171158
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 294,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306058,
+        "DelaySeconds": 198,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7955475,
+          -41.3127022
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306118,
+        "DelaySeconds": 198,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7960052,
+          -41.311779
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306183,
+        "DelaySeconds": 250,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7983704,
+          -41.3079033
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 36,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306238,
+        "DelaySeconds": 250,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8022156,
+          -41.3043022
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 72,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306303,
+        "DelaySeconds": 253,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.804184,
+          -41.3023262
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306363,
+        "DelaySeconds": 255,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8053741,
+          -41.2990456
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306419,
+        "DelaySeconds": 263,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8049011,
+          -41.2954063
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 306,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306484,
+        "DelaySeconds": 291,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.803009,
+          -41.2915001
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306539,
+        "DelaySeconds": 247,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8039703,
+          -41.2864456
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306599,
+        "DelaySeconds": 199,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7977295,
+          -41.2891273
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306664,
+        "DelaySeconds": 185,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7955017,
+          -41.2911148
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 246,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306719,
+        "DelaySeconds": 144,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7927246,
+          -41.291317
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306784,
+        "DelaySeconds": 144,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7887421,
+          -41.2916107
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 258,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306824,
+        "DelaySeconds": 206,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7843781,
+          -41.2933159
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306904,
+        "DelaySeconds": 174,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7831726,
+          -41.2939148
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 282,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736306964,
+        "DelaySeconds": 187,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824097,
+          -41.2938042
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 282,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307024,
+        "DelaySeconds": 187,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7803345,
+          -41.2931404
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 294,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307084,
+        "DelaySeconds": 264,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7777252,
+          -41.2916832
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 306,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307145,
+        "DelaySeconds": 269,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7773132,
+          -41.2913437
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 306,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307210,
+        "DelaySeconds": 294,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7770233,
+          -41.2912483
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 312,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307260,
+        "DelaySeconds": 205,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7752228,
+          -41.2897949
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 312,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307325,
+        "DelaySeconds": 260,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7749329,
+          -41.2892723
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 324,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307390,
+        "DelaySeconds": 265,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.775116,
+          -41.2885704
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307445,
+        "DelaySeconds": 330,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7761078,
+          -41.2867966
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307505,
+        "DelaySeconds": 350,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.776413,
+          -41.2865334
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307560,
+        "DelaySeconds": 265,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7766876,
+          -41.2860947
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307625,
+        "DelaySeconds": 320,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7774658,
+          -41.2843628
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307685,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7785797,
+          -41.2822075
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307745,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7788391,
+          -41.2817459
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307810,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7784576,
+          -41.2813263
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 300,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307861,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7772675,
+          -41.2796326
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307931,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7787476,
+          -41.2784843
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736307986,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.779007,
+          -41.2784042
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 90,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308051,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.781189,
+          -41.276474
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 36,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308111,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7825317,
+          -41.2757759
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308161,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7811127,
+          -41.2700348
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308231,
+        "DelaySeconds": 331,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7811127,
+          -41.2681236
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308291,
+        "DelaySeconds": 391,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7859955,
+          -41.2630005
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308346,
+        "DelaySeconds": 440,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7896423,
+          -41.2601738
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308411,
+        "DelaySeconds": 434,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7946625,
+          -41.2565308
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308461,
+        "DelaySeconds": 434,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8018036,
+          -41.2532997
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 330,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308532,
+        "DelaySeconds": 412,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8021698,
+          -41.2528534
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 102,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308587,
+        "DelaySeconds": 332,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8035431,
+          -41.2505493
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308627,
+        "DelaySeconds": 384,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.806076,
+          -41.2493134
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308712,
+        "DelaySeconds": 367,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8072662,
+          -41.2476921
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308772,
+        "DelaySeconds": 397,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8082428,
+          -41.2472076
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308832,
+        "DelaySeconds": 397,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.806778,
+          -41.2468414
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 312,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308882,
+        "DelaySeconds": 457,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8056793,
+          -41.2457657
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736308947,
+        "DelaySeconds": 452,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8026428,
+          -41.2474403
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 222,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309012,
+        "DelaySeconds": 517,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8021851,
+          -41.2476921
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 228,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309057,
+        "DelaySeconds": 517,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7995605,
+          -41.2484055
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309097,
+        "DelaySeconds": 577,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7976379,
+          -41.2472496
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 318,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309157,
+        "DelaySeconds": 577,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7948914,
+          -41.2474937
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309252,
+        "DelaySeconds": 597,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7914581,
+          -41.2471504
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 306,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309308,
+        "DelaySeconds": 629,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7896423,
+          -41.2476463
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309373,
+        "DelaySeconds": 633,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7915955,
+          -41.2434692
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309433,
+        "DelaySeconds": 677,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7925262,
+          -41.2418289
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309493,
+        "DelaySeconds": 677,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7945557,
+          -41.2406197
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309553,
+        "DelaySeconds": 693,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.798111,
+          -41.2361984
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309608,
+        "DelaySeconds": 742,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7973938,
+          -41.2347221
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309673,
+        "DelaySeconds": 693,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7955322,
+          -41.2332382
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 312,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309728,
+        "DelaySeconds": 758,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7936707,
+          -41.234272
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309793,
+        "DelaySeconds": 758,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7930756,
+          -41.2354851
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 150,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309853,
+        "DelaySeconds": 758,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.792572,
+          -41.2375641
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 96,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309913,
+        "DelaySeconds": 698,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7965698,
+          -41.2372627
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 144,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736309973,
+        "DelaySeconds": 693,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7982025,
+          -41.2335281
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736310028,
+        "DelaySeconds": 620,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8003693,
+          -41.2293816
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736310094,
+        "DelaySeconds": 513,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8042145,
+          -41.2236519
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736310154,
+        "DelaySeconds": 458,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8045502,
+          -41.223278
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "15:50:00",
+        "TipId": "24__0__131__TZM__101__3__101__3_20241222",
+        "timestamp": 1736310159,
+        "DelaySeconds": 458,
+        "Route": "24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920074,
+          -41.2231979
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311000,
+        "DelaySeconds": 458,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920074,
+          -41.2231941
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311060,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920227,
+          -41.2231865
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311120,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.792038,
+          -41.223156
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311180,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920227,
+          -41.2231369
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311240,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920227,
+          -41.2231407
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 174,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311300,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7920532,
+          -41.2234001
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 162,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311365,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7932129,
+          -41.2273636
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311420,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7966461,
+          -41.2241211
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311485,
+        "DelaySeconds": 285,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7967377,
+          -41.2226563
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311540,
+        "DelaySeconds": 321,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7965851,
+          -41.2212143
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 354,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311606,
+        "DelaySeconds": 321,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7953339,
+          -41.2180748
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 54,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311661,
+        "DelaySeconds": 346,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7982635,
+          -41.2186699
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311721,
+        "DelaySeconds": 336,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8015442,
+          -41.2162399
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311786,
+        "DelaySeconds": 333,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8033905,
+          -41.2188797
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 120,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311841,
+        "DelaySeconds": 291,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8073883,
+          -41.2192802
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311906,
+        "DelaySeconds": 261,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8071289,
+          -41.2217178
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 264,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736311961,
+        "DelaySeconds": 286,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.805191,
+          -41.2227707
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 228,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312021,
+        "DelaySeconds": 288,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.803894,
+          -41.2241325
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 204,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312086,
+        "DelaySeconds": 286,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.806839,
+          -41.2246857
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 102,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312141,
+        "DelaySeconds": 308,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8071136,
+          -41.2261353
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312206,
+        "DelaySeconds": 308,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.807312,
+          -41.2267609
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312261,
+        "DelaySeconds": 406,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8080292,
+          -41.2334175
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312322,
+        "DelaySeconds": 465,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8102417,
+          -41.2416458
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 126,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312382,
+        "DelaySeconds": 465,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8141479,
+          -41.2445679
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312442,
+        "DelaySeconds": 465,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.813385,
+          -41.2472839
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312507,
+        "DelaySeconds": 326,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8042908,
+          -41.2528572
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312567,
+        "DelaySeconds": 326,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7940369,
+          -41.2570076
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 222,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312627,
+        "DelaySeconds": 364,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7888641,
+          -41.261055
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 222,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312687,
+        "DelaySeconds": 272,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7821808,
+          -41.266674
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312747,
+        "DelaySeconds": 227,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7825012,
+          -41.2725449
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312812,
+        "DelaySeconds": 207,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7831879,
+          -41.2738304
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312867,
+        "DelaySeconds": 142,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7800598,
+          -41.2779388
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312927,
+        "DelaySeconds": 172,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.778717,
+          -41.2786903
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736312988,
+        "DelaySeconds": 172,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7774353,
+          -41.279377
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313048,
+        "DelaySeconds": 233,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7773285,
+          -41.2794342
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313108,
+        "DelaySeconds": 269,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7779541,
+          -41.2806931
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 150,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313168,
+        "DelaySeconds": 269,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7777405,
+          -41.2820549
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 252,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313233,
+        "DelaySeconds": 269,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7765198,
+          -41.2839279
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 222,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313288,
+        "DelaySeconds": 269,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7764587,
+          -41.2853432
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313353,
+        "DelaySeconds": 269,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.77565,
+          -41.2875633
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313408,
+        "DelaySeconds": 267,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7754669,
+          -41.2882309
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 210,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313468,
+        "DelaySeconds": 267,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7749329,
+          -41.2891426
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 162,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313533,
+        "DelaySeconds": 233,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7764282,
+          -41.2909088
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313588,
+        "DelaySeconds": 276,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7785187,
+          -41.2921829
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 126,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313653,
+        "DelaySeconds": 173,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7797394,
+          -41.2928658
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 126,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313709,
+        "DelaySeconds": 207,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.782547,
+          -41.2937775
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 108,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313774,
+        "DelaySeconds": 174,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7832794,
+          -41.2938843
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 102,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313834,
+        "DelaySeconds": 119,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7835693,
+          -41.293911
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 102,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313894,
+        "DelaySeconds": 174,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7832642,
+          -41.2953033
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 204,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736313954,
+        "DelaySeconds": 174,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968674
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314009,
+        "DelaySeconds": 174,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7813263,
+          -41.2989044
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314154,
+        "DelaySeconds": 319,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7816925,
+          -41.3001328
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 168,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314214,
+        "DelaySeconds": 259,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7797241,
+          -41.3015594
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314274,
+        "DelaySeconds": 283,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7787628,
+          -41.3045883
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314329,
+        "DelaySeconds": 259,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7783661,
+          -41.3086357
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 168,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314395,
+        "DelaySeconds": 194,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7788849,
+          -41.3105125
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 168,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314455,
+        "DelaySeconds": 140,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7791443,
+          -41.3118401
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314515,
+        "DelaySeconds": 167,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7784729,
+          -41.3139725
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314575,
+        "DelaySeconds": 167,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7780151,
+          -41.3173103
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314635,
+        "DelaySeconds": 182,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7779083,
+          -41.3192749
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314695,
+        "DelaySeconds": 135,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7753448,
+          -41.3199005
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 246,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314755,
+        "DelaySeconds": 140,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.775116,
+          -41.3229713
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314815,
+        "DelaySeconds": 135,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7748566,
+          -41.3259392
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314875,
+        "DelaySeconds": 80,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7737732,
+          -41.3309288
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314935,
+        "DelaySeconds": 119,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7733765,
+          -41.3346443
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736314995,
+        "DelaySeconds": 2,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7724609,
+          -41.3377266
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736315060,
+        "DelaySeconds": -105,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7712402,
+          -41.3407669
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736315115,
+        "DelaySeconds": -100,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7704926,
+          -41.3424835
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736315150,
+        "DelaySeconds": -160,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7704926,
+          -41.3424835
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "17:37:00",
+        "TipId": "1__1__248__TZM__101__3__101__3_20241222",
+        "timestamp": 1736315150,
+        "DelaySeconds": -142,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.770401,
+          -41.3430214
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318008,
+        "DelaySeconds": -142,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7703857,
+          -41.3430138
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318063,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7703857,
+          -41.3429947
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318124,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7702484,
+          -41.342865
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318189,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7722015,
+          -41.3383064
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318244,
+        "DelaySeconds": 91,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7732849,
+          -41.3354645
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318309,
+        "DelaySeconds": 66,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7734528,
+          -41.3342133
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318364,
+        "DelaySeconds": 78,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7736969,
+          -41.3317261
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318424,
+        "DelaySeconds": 87,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.774765,
+          -41.3261909
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318489,
+        "DelaySeconds": 79,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7752228,
+          -41.3214264
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318549,
+        "DelaySeconds": 30,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7754059,
+          -41.3197784
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 66,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318604,
+        "DelaySeconds": 61,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7779541,
+          -41.3184395
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318674,
+        "DelaySeconds": 29,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7783203,
+          -41.3144913
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 12,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318729,
+        "DelaySeconds": 34,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7789307,
+          -41.3124695
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 12,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318789,
+        "DelaySeconds": 34,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7789917,
+          -41.3111229
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 348,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318855,
+        "DelaySeconds": 63,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7782898,
+          -41.3087692
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 342,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318915,
+        "DelaySeconds": 100,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7783813,
+          -41.3055992
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 12,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736318975,
+        "DelaySeconds": 95,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7790527,
+          -41.3008499
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 300,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319035,
+        "DelaySeconds": 106,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7811432,
+          -41.2984848
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 30,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319090,
+        "DelaySeconds": 21,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7828217,
+          -41.2955627
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319155,
+        "DelaySeconds": -25,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7822876,
+          -41.2937775
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319215,
+        "DelaySeconds": -35,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7822418,
+          -41.2938156
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 288,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319275,
+        "DelaySeconds": -85,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7812805,
+          -41.2935524
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 294,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319335,
+        "DelaySeconds": -20,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7800293,
+          -41.2931252
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 294,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319390,
+        "DelaySeconds": 10,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7770233,
+          -41.2913475
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 306,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319455,
+        "DelaySeconds": 35,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7750397,
+          -41.2895546
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319515,
+        "DelaySeconds": -20,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7746124,
+          -41.2892189
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 324,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319576,
+        "DelaySeconds": -85,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7761841,
+          -41.2866859
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319636,
+        "DelaySeconds": -24,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7770691,
+          -41.2852516
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319696,
+        "DelaySeconds": -84,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7775879,
+          -41.283989
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319751,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7785492,
+          -41.2813187
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 324,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319816,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7778625,
+          -41.2805214
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 324,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319876,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7787781,
+          -41.2784805
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319936,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7796631,
+          -41.2781525
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736319996,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7809906,
+          -41.2767029
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 24,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320051,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7833862,
+          -41.2741241
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 330,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320116,
+        "DelaySeconds": -45,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7815857,
+          -41.2709427
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320171,
+        "DelaySeconds": -81,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7818604,
+          -41.2668686
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 36,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320236,
+        "DelaySeconds": -81,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7882538,
+          -41.2613907
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320297,
+        "DelaySeconds": -21,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.791626,
+          -41.2585068
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320357,
+        "DelaySeconds": -59,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8000031,
+          -41.2546425
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 60,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320412,
+        "DelaySeconds": -31,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8093567,
+          -41.2499046
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 54,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320472,
+        "DelaySeconds": -47,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8121338,
+          -41.2425499
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 294,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320537,
+        "DelaySeconds": -47,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8052673,
+          -41.2376442
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 348,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320602,
+        "DelaySeconds": -96,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8090363,
+          -41.2322502
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 36,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320662,
+        "DelaySeconds": -141,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8072205,
+          -41.225132
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320722,
+        "DelaySeconds": -141,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8046875,
+          -41.2230644
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 42,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320777,
+        "DelaySeconds": -141,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.805069,
+          -41.2228088
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320837,
+        "DelaySeconds": -143,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8053741,
+          -41.2226868
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 48,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320902,
+        "DelaySeconds": -83,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8073273,
+          -41.219574
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736320962,
+        "DelaySeconds": -16,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8082581,
+          -41.2156563
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321022,
+        "DelaySeconds": -73,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8079376,
+          -41.2134209
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 342,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321077,
+        "DelaySeconds": -71,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8064423,
+          -41.2127571
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321143,
+        "DelaySeconds": -96,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8053436,
+          -41.2106934
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321203,
+        "DelaySeconds": -77,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8061829,
+          -41.2081223
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 336,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321263,
+        "DelaySeconds": -137,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8046265,
+          -41.2072372
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 264,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321319,
+        "DelaySeconds": -84,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8039856,
+          -41.2057457
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 18,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321378,
+        "DelaySeconds": -139,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8076782,
+          -41.2012711
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 0,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321443,
+        "DelaySeconds": -86,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8083191,
+          -41.1943474
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 6,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321503,
+        "DelaySeconds": -154,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8075562,
+          -41.190567
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 348,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321538,
+        "DelaySeconds": -226,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8075562,
+          -41.190567
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 348,
+        "TripStartDate": "20250108",
+        "TripStartTime": "19:35:00",
+        "TipId": "1__0__263__TZM__101__3__101__3_20241222",
+        "timestamp": 1736321538,
+        "DelaySeconds": -367,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8070984,
+          -41.1893425
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 162,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322344,
+        "DelaySeconds": -367,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8082428,
+          -41.1947212
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322404,
+        "DelaySeconds": 0,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8074646,
+          -41.1997643
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 180,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322464,
+        "DelaySeconds": 29,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8072815,
+          -41.2023048
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 246,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322524,
+        "DelaySeconds": 39,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8036804,
+          -41.2061272
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322585,
+        "DelaySeconds": 49,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8062592,
+          -41.2083588
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322645,
+        "DelaySeconds": 50,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8054199,
+          -41.2119293
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322705,
+        "DelaySeconds": 17,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.808197,
+          -41.2144051
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 150,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322770,
+        "DelaySeconds": 42,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8078003,
+          -41.2164307
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322830,
+        "DelaySeconds": 55,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8077545,
+          -41.2205009
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 144,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322885,
+        "DelaySeconds": 67,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8044434,
+          -41.2233505
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736322945,
+        "DelaySeconds": 26,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8058319,
+          -41.2245827
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 102,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323005,
+        "DelaySeconds": 49,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8071899,
+          -41.2264938
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 162,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323070,
+        "DelaySeconds": 49,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8089294,
+          -41.2325706
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323130,
+        "DelaySeconds": 110,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8087311,
+          -41.2402992
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323190,
+        "DelaySeconds": 117,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.813385,
+          -41.2471771
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 186,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323250,
+        "DelaySeconds": 117,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8102875,
+          -41.2494621
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 228,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323310,
+        "DelaySeconds": 15,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.8016357,
+          -41.2540092
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323366,
+        "DelaySeconds": 35,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.792511,
+          -41.2580032
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 228,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323426,
+        "DelaySeconds": 35,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7853699,
+          -41.2635727
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 216,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323491,
+        "DelaySeconds": -39,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7809448,
+          -41.2693787
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 168,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323551,
+        "DelaySeconds": -39,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7834473,
+          -41.2752113
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 204,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323611,
+        "DelaySeconds": -77,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7788544,
+          -41.2785645
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 234,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323671,
+        "DelaySeconds": -79,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7774353,
+          -41.2793579
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 240,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323731,
+        "DelaySeconds": -69,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7777252,
+          -41.2821541
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323796,
+        "DelaySeconds": -24,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7763367,
+          -41.2843056
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 198,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323851,
+        "DelaySeconds": -24,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7766876,
+          -41.2854462
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 126,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323911,
+        "DelaySeconds": -24,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7752838,
+          -41.2881622
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 192,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736323971,
+        "DelaySeconds": -89,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7751465,
+          -41.2898254
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 156,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324031,
+        "DelaySeconds": -189,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7765808,
+          -41.2909851
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324091,
+        "DelaySeconds": -187,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7770081,
+          -41.2913437
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 138,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324156,
+        "DelaySeconds": -189,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7786713,
+          -41.2925606
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "Bearing": 114,
+        "TripStartDate": "20250108",
+        "TripStartTime": "20:45:00",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324212,
+        "DelaySeconds": -125,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7827759,
+          -41.2938614
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324332,
+        "DelaySeconds": -124,
+        "Route": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.782959,
+          -41.2938843
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324432,
+        "DelaySeconds": -78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7827606,
+          -41.2963448
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324527
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.782547,
+          -41.29673
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324532,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968674
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324537,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968674
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324542,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968636
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324547,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968636
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324547,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824707,
+          -41.2968597
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324552,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7824097,
+          -41.2969437
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324557,
+        "DelaySeconds": -48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7823486,
+          -41.2970352
+        ]
+      },
+      "properties": {
+        "VehicleRef": "3501",
+        "TipId": "1__1__272__TZM__101__3__101__3_20241222",
+        "timestamp": 1736324562,
+        "DelaySeconds": -48
+      }
+    }
+  ]
+}
