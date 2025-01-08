@@ -464,20 +464,22 @@ app.get('/stopDepartures/:stop', function(request, response) {
 async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     const vehicleData = {};
   
-  console.log(csvFilePath)
+    console.log(csvFilePath)
+
+    console.log("Parsing CSV...")
 
     // Step 1: Parse the CSV
     await new Promise((resolve, reject) => {
         fs.createReadStream(csvFilePath)
-            .pipe(csv())
+            .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'Delay']))
             .on('data', (row) => {
                 const { VehicleRef, timestamp, long, lat } = row;
 
-          console.log(row)
-          console.log(VehicleRef)
-          console.log(timestamp)
-          console.log(long)
-          console.log(lat)
+          // console.log(row)
+          // console.log(VehicleRef)
+          // console.log(timestamp)
+          // console.log(long)
+          // console.log(lat)
           
                 if (!vehicleData[VehicleRef]) {
                     vehicleData[VehicleRef] = [];
@@ -493,11 +495,13 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
             .on('error', reject);
     });
 
+    console.log("creating GPX content...")
     // Step 2: Create GPX content
     const gpx = create({ version: '1.0', encoding: 'UTF-8' })
         .ele('gpx', { xmlns: 'http://www.topografix.com/GPX/1/1', version: '1.1', creator: 'Node.js' });
 
-    Object.entries(vehicleData).forEach(([vehicleRef, points]) => {
+    Object.entries(vehicleData).filter(key => ['3171', '5705'].includes(key)).forEach(([vehicleRef, points]) => {
+        console.log(vehicleRef)
         const track = gpx.ele('trk');
         track.ele('name').txt(`Vehicle ${vehicleRef}`);
         const trackSegment = track.ele('trkseg');
@@ -507,9 +511,12 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
         });
     });
 
+    console.log("Creating string...")
     // Step 3: Write to a GPX file
     const gpxString = gpx.end({ prettyPrint: true });
-  
+    console.log("Created string...")
+
+     console.log(gpxString) 
     return gpxString;
 //     fs.writeFileSync(gpxFilePath, gpxString);
 
@@ -538,6 +545,8 @@ app.get('/gpx', function(request, response) {
   const filePath = path.join(dirname, filename);
 
   const gpx = createGpxFromCsv(filePath)
+  
+  // console.log(gpx.length)
   
   response.send(gpx)
 });
