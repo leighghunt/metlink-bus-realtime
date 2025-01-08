@@ -500,7 +500,9 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     const gpx = create({ version: '1.0', encoding: 'UTF-8' })
         .ele('gpx', { xmlns: 'http://www.topografix.com/GPX/1/1', version: '1.1', creator: 'Node.js' });
 
-    Object.entries(vehicleData).filter(key => ['3171', '5705'].includes(key)).forEach(([vehicleRef, points]) => {
+    Object.entries(vehicleData)
+        // .filter(key => ['3171', '5705'].includes(key))
+        .forEach(([vehicleRef, points]) => {
         console.log(vehicleRef)
         const track = gpx.ele('trk');
         track.ele('name').txt(`Vehicle ${vehicleRef}`);
@@ -516,7 +518,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     const gpxString = gpx.end({ prettyPrint: true });
     console.log("Created string...")
 
-     console.log(gpxString) 
+     // console.log(gpxString) 
     return gpxString;
 //     fs.writeFileSync(gpxFilePath, gpxString);
 
@@ -526,7 +528,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
 
 
 
-app.get('/gpx', function(request, response) {
+app.get('/gpx', async function(request, response) {
   console.log("GPX extract");
   let dateStr = request.params.dateStr;
   
@@ -543,12 +545,21 @@ app.get('/gpx', function(request, response) {
   }
   const filename = `${dateStr}.csv`;
   const filePath = path.join(dirname, filename);
+  
+  try {
+        const gpxContent = await createGpxFromCsv(filePath)
+      
+        // Set the response headers for a GPX file
+        response.setHeader('Content-Type', 'application/gpx+xml');
+        response.setHeader('Content-Disposition', 'attachment; filename="output.gpx"');
 
-  const gpx = createGpxFromCsv(filePath)
+        // Send the GPX content as the response
+        response.send(gpxContent);
+    } catch (error) {
+        console.error('Error generating GPX file:', error);
+        response.status(500).send('Failed to generate GPX file');
+    }
   
-  // console.log(gpx.length)
-  
-  response.send(gpx)
 });
 
 
