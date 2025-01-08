@@ -517,10 +517,13 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
         points.forEach(({ timestamp, long, lat, tripId, delay, bearing}) => {
             // trackSegment.ele('trkpt', { lat, lon: long }).ele('time').txt(timestamp);
             // Include tripId, delay and bearing as attributes of <trkpt>
-            trackSegment.ele('trkpt', { lat, lon: long, tripId, delay, bearing }).ele('time').txt(timestamp);
+            // trackSegment.ele('trkpt', { lat, lon: long, tripId, delay, bearing }).ele('time').txt(timestamp);
           
-//             const trackPoint = trackSegment.ele('trkpt', { lat, lon: long });
-//             trackPoint.ele('time').txt(timestamp);
+            const trackPoint = trackSegment.ele('trkpt', { lat, lon: long });
+            trackPoint.ele('time').txt(timestamp);
+            // trackPoint.ele('tripId').txt(tripId);
+            // trackPoint.ele('delay').txt(delay);
+            // trackPoint.ele('bearing').txt(bearing);
 
 //             // Add delay and bearing as custom extensions
 //             const extensions = trackPoint.ele('extensions');
