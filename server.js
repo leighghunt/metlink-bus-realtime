@@ -471,15 +471,18 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     // Step 1: Parse the CSV
     await new Promise((resolve, reject) => {
         fs.createReadStream(csvFilePath)
-            .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'Delay', 'Bearing']))
+            .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'delay', 'bearing']))
             .on('data', (row) => {
                 const { VehicleRef, timestamp, long, lat, tripId, delay, bearing } = row;
 
-          // console.log(row)
-          // console.log(VehicleRef)
-          // console.log(timestamp)
-          // console.log(long)
-          // console.log(lat)
+                // console.log(row)
+                // console.log(VehicleRef)
+                // console.log(timestamp)
+                // // console.log(long)
+                // // console.log(lat)
+                // console.log(tripId)
+                // console.log(delay)
+                // console.log(bearing)
           
                 if (!vehicleData[VehicleRef]) {
                     vehicleData[VehicleRef] = [];
@@ -489,9 +492,9 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
                     timestamp: new Date(Number(timestamp) * 1000).toISOString(),
                     long: parseFloat(long),
                     lat: parseFloat(lat),
-                    tripid: tripId,
-                    delay: parseInt(delay, 10),
-                    bearing: parseFloat(bearing),
+                    tripId: tripId,
+                    delay: parseInt(delay),
+                    bearing: parseInt(bearing),
                 });
             })
             .on('end', resolve)
@@ -506,7 +509,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     Object.entries(vehicleData)
         // .filter(key => ['3171', '5705'].includes(key))
         .forEach(([vehicleRef, points]) => {
-        console.log(vehicleRef)
+        // console.log(vehicleRef)
         const track = gpx.ele('trk');
         track.ele('name').txt(`Vehicle ${vehicleRef}`);
         const trackSegment = track.ele('trkseg');
