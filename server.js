@@ -42,8 +42,6 @@ let dataDir = "/Data"
 let persistCounter = 0
 
 function callVehiclePositionAPI(){
-  console.log('callVehiclePositionAPI....');
-  // console.log(process.env.metlink_api_key)
     
   axios.get(vehiclePositionURL, {
   headers: {
@@ -57,14 +55,9 @@ function callVehiclePositionAPI(){
   .catch(function (error) {
     console.error(error);
   })
-
-  console.log('callVehiclePositionAPI DONE');
-  // console.log(vehicles);
 }
 
 function handleVehiclePositionResponse(data){    
-  
-  console.log('handleVehiclePositionResponse....');
   let recordedAtTime = Date(data["header"]["timestamp"]);
   // console.log(recordedAtTime);
 
@@ -152,7 +145,6 @@ function handleVehiclePositionResponse(data){
       }
     }
   });
-  console.log('handleVehiclePositionResponse DONE');
 }
 
 function persistVehicleCSV(vehicle) {
@@ -471,6 +463,8 @@ app.get('/stopDepartures/:stop', function(request, response) {
 // Function to parse the CSV and create a GPX file
 async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     const vehicleData = {};
+  
+  console.log(csvFilePath)
 
     // Step 1: Parse the CSV
     await new Promise((resolve, reject) => {
@@ -479,6 +473,12 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
             .on('data', (row) => {
                 const { VehicleRef, timestamp, long, lat } = row;
 
+          console.log(row)
+          console.log(VehicleRef)
+          console.log(timestamp)
+          console.log(long)
+          console.log(lat)
+          
                 if (!vehicleData[VehicleRef]) {
                     vehicleData[VehicleRef] = [];
                 }
@@ -519,9 +519,9 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
 
 
 
-app.get('/gpx/:dateStr', function(request, response) {
+app.get('/gpx', function(request, response) {
   console.log("GPX extract");
-  const dateStr = request.params.dateStr;
+  let dateStr = request.params.dateStr;
   
   if(dateStr == null){
     // Get current date in New Zealand timezone
