@@ -161,7 +161,7 @@ function persistVehicleCSV(vehicle) {
     }
     const filename = `${dateStr}.csv`;
     const filePath = path.join(dirname, filename);
-    const csvData = `${vehicle.VehicleRef}, ${vehicle.entity.vehicle.timestamp}, ${vehicle.Long}, ${vehicle.Lat}, ${vehicle.Trip.trip_id}, ${vehicle.DelaySeconds}\n`;
+    const csvData = `${vehicle.VehicleRef}, ${vehicle.entity.vehicle.timestamp}, ${vehicle.Long}, ${vehicle.Lat}, ${vehicle.Trip.trip_id}, ${vehicle.DelaySeconds}, ${vehicle.Bearing}\n`;
     
     
     // Save updated data to disk in GeoJSON format
@@ -471,7 +471,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
     // Step 1: Parse the CSV
     await new Promise((resolve, reject) => {
         fs.createReadStream(csvFilePath)
-            .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'Delay']))
+            .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'Delay', 'Bearing']))
             .on('data', (row) => {
                 const { VehicleRef, timestamp, long, lat } = row;
 
