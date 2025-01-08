@@ -5,7 +5,9 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
 const { dir } = require('console');
-const togpx = require('togpx');
+// const togpx = require('togpx');
+const csv = require('csv-parser');
+const { create } = require('xmlbuilder2');
 
 // Setup SocketIO
 var server = require('http').Server(app);
@@ -281,18 +283,18 @@ function geoJsonByVehicleAndDate(vehicleRef, dateStr) {
   }
 }
 
-function geoJsonToGpxByVehicle(vehicleRef) {
-  return geoJsonToGpxByVehicleAndDate(vehicleRef, null);
-}
+// function geoJsonToGpxByVehicle(vehicleRef) {
+//   return geoJsonToGpxByVehicleAndDate(vehicleRef, null);
+// }
   
-function geoJsonToGpxByVehicleAndDate(vehicleRef, dateStr) {
-  let geojsonData = geoJsonByVehicleAndDate(vehicleRef, dateStr);
-  return geoJsonToGpx(geojsonData);
-}
+// function geoJsonToGpxByVehicleAndDate(vehicleRef, dateStr) {
+//   let geojsonData = geoJsonByVehicleAndDate(vehicleRef, dateStr);
+//   return geoJsonToGpx(geojsonData);
+// }
 
-function geoJsonToGpx(geojsonData) {
-  return togpx(geojsonData);
-}
+// function geoJsonToGpx(geojsonData) {
+//   return togpx(geojsonData);
+// }
 
 function callStopsAPI(){
   // console.log('callStopsAPI....');
@@ -465,24 +467,100 @@ app.get('/stopDepartures/:stop', function(request, response) {
 
 
 
-app.get('/gpx/:vehicleRef', function(request, response) {
-  console.log(request.params.vehicleRef);
-  const gpx = geoJsonToGpxByVehicle(request.params.vehicleRef);
+
+// Function to parse the CSV and create a GPX file
+async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
+    const vehicleData = {};
+
+    // Step 1: Parse the CSV
+    await new Promise((resolve, reject) => {
+        fs.createReadStream(csvFilePath)
+            .pipe(csv())
+            .on('data', (row) => {
+                const { VehicleRef, timestamp, long, lat } = row;
+
+                if (!vehicleData[VehicleRef]) {
+                    vehicleData[VehicleRef] = [];
+                }
+
+                vehicleData[VehicleRef].push({
+                    timestamp: new Date(Number(timestamp) * 1000).toISOString(),
+                    long: parseFloat(long),
+                    lat: parseFloat(lat),
+                });
+            })
+            .on('end', resolve)
+            .on('error', reject);
+    });
+
+    // Step 2: Create GPX content
+    const gpx = create({ version: '1.0', encoding: 'UTF-8' })
+        .ele('gpx', { xmlns: 'http://www.topografix.com/GPX/1/1', version: '1.1', creator: 'Node.js' });
+
+    Object.entries(vehicleData).forEach(([vehicleRef, points]) => {
+        const track = gpx.ele('trk');
+        track.ele('name').txt(`Vehicle ${vehicleRef}`);
+        const trackSegment = track.ele('trkseg');
+
+        points.forEach(({ timestamp, long, lat }) => {
+            trackSegment.ele('trkpt', { lat, lon: long }).ele('time').txt(timestamp);
+        });
+    });
+
+    // Step 3: Write to a GPX file
+    const gpxString = gpx.end({ prettyPrint: true });
+  
+    return gpxString;
+//     fs.writeFileSync(gpxFilePath, gpxString);
+
+//     console.log(`GPX file created at ${gpxFilePath}`);
+}
+
+
+
+
+app.get('/gpx/:dateStr', function(request, response) {
+  console.log("GPX extract");
+  const dateStr = request.params.dateStr;
+  
+  if(dateStr == null){
+    // Get current date in New Zealand timezone
+    const now = moment().tz('Pacific/Auckland');
+    dateStr = now.format('YYYYMMDD');
+  }
+
+  // Create filename
+  const dirname = path.join(__dirname, dataDir);
+  if(dirname && !fs.existsSync(dirname)){
+    fs.mkdirSync(dirname);
+  }
+  const filename = `${dateStr}.csv`;
+  const filePath = path.join(dirname, filename);
+
+  const gpx = createGpxFromCsv(filePath)
+  
   response.send(gpx)
 });
 
-app.get('/geoJson/:vehicleRef/:dateStr', function(request, response) {
-  console.log(request.params.vehicleRef);
-  console.log(request.params.dateStr);
-  const gpx = geoJsonByVehicleAndDate(request.params.vehicleRef, request.params.dateStr);
-  response.send(gpx)
-});
 
-app.get('/geoJson/:vehicleRef', function(request, response) {
-  console.log(request.params.vehicleRef);
-  const gpx = geoJsonByVehicle(request.params.vehicleRef);
-  response.send(gpx)
-});
+// app.get('/gpx/:vehicleRef', function(request, response) {
+//   console.log(request.params.vehicleRef);
+//   const gpx = geoJsonToGpxByVehicle(request.params.vehicleRef);
+//   response.send(gpx)
+// });
+
+// app.get('/geoJson/:vehicleRef/:dateStr', function(request, response) {
+//   console.log(request.params.vehicleRef);
+//   console.log(request.params.dateStr);
+//   const gpx = geoJsonByVehicleAndDate(request.params.vehicleRef, request.params.dateStr);
+//   response.send(gpx)
+// });
+
+// app.get('/geoJson/:vehicleRef', function(request, response) {
+//   console.log(request.params.vehicleRef);
+//   const gpx = geoJsonByVehicle(request.params.vehicleRef);
+//   response.send(gpx)
+// });
 
 
 
