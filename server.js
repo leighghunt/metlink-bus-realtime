@@ -174,119 +174,119 @@ function persistVehicleCSV(vehicle) {
   }
 }
 
-function persistVehicleGeoJSON(vehicle) {
-  try{
-    // Get current date in New Zealand timezone
-    const now = moment().tz('Pacific/Auckland');
-    const dateStr = now.format('YYYYMMDD');
-    const vehicleRef = vehicle.VehicleRef; // Assuming vehicleRef is a property of vehicle
+// function persistVehicleGeoJSON(vehicle) {
+//   try{
+//     // Get current date in New Zealand timezone
+//     const now = moment().tz('Pacific/Auckland');
+//     const dateStr = now.format('YYYYMMDD');
+//     const vehicleRef = vehicle.VehicleRef; // Assuming vehicleRef is a property of vehicle
 
-    // Create filename
-    const dirname = path.join(__dirname, dataDir, dateStr);
-    if(dirname && !fs.existsSync(dirname)){
-      fs.mkdirSync(dirname);
-    }
-    const filename = `${dateStr}_${vehicleRef}.geojson`;
-    const filePath = path.join(dirname, filename);
+//     // Create filename
+//     const dirname = path.join(__dirname, dataDir, dateStr);
+//     if(dirname && !fs.existsSync(dirname)){
+//       fs.mkdirSync(dirname);
+//     }
+//     const filename = `${dateStr}_${vehicleRef}.geojson`;
+//     const filePath = path.join(dirname, filename);
 
-    let geojsonData;
+//     let geojsonData;
 
-    // Check if file exists
-    if (fs.existsSync(filePath)) {
-      // Read existing data
-      const existingData = fs.readFileSync(filePath);
-      geojsonData = JSON.parse(existingData);
-    } else {
-      // Create new GeoJSON structure
-      geojsonData = {
-        type: "FeatureCollection",
-        features: []
-      };
-    }
+//     // Check if file exists
+//     if (fs.existsSync(filePath)) {
+//       // Read existing data
+//       const existingData = fs.readFileSync(filePath);
+//       geojsonData = JSON.parse(existingData);
+//     } else {
+//       // Create new GeoJSON structure
+//       geojsonData = {
+//         type: "FeatureCollection",
+//         features: []
+//       };
+//     }
 
-    // Create a new feature for the vehicle
-    const feature = {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [vehicle.Long, vehicle.Lat]
-      },
-      properties: {
-        VehicleRef: vehicle.VehicleRef,
-        // // RecordedAtTime: vehicle.RecordedAtTime,
-        // Bearing: vehicle.Bearing,
-        // // entity: vehicle.entity,
-        // // Trip: vehicle.Trip,
-        // TripStartDate: vehicle.Trip.start_date,
-        // TripStartTime: vehicle.Trip.start_time,
-        TipId: vehicle.Trip.trip_id,
-        timestamp: vehicle.entity.vehicle.timestamp,
-        // RouteId: vehicle.RouteId,
-        DelaySeconds: vehicle.DelaySeconds,
-        // Route: vehicle.Route
-      }
-    };
+//     // Create a new feature for the vehicle
+//     const feature = {
+//       type: "Feature",
+//       geometry: {
+//         type: "Point",
+//         coordinates: [vehicle.Long, vehicle.Lat]
+//       },
+//       properties: {
+//         VehicleRef: vehicle.VehicleRef,
+//         // // RecordedAtTime: vehicle.RecordedAtTime,
+//         // Bearing: vehicle.Bearing,
+//         // // entity: vehicle.entity,
+//         // // Trip: vehicle.Trip,
+//         // TripStartDate: vehicle.Trip.start_date,
+//         // TripStartTime: vehicle.Trip.start_time,
+//         TipId: vehicle.Trip.trip_id,
+//         timestamp: vehicle.entity.vehicle.timestamp,
+//         // RouteId: vehicle.RouteId,
+//         DelaySeconds: vehicle.DelaySeconds,
+//         // Route: vehicle.Route
+//       }
+//     };
 
-    // Append new vehicle data
-    geojsonData.features.push(feature);
+//     // Append new vehicle data
+//     geojsonData.features.push(feature);
 
-    // Save updated data to disk in GeoJSON format
-    fs.writeFileSync(filePath, JSON.stringify(geojsonData, null, 2));
+//     // Save updated data to disk in GeoJSON format
+//     fs.writeFileSync(filePath, JSON.stringify(geojsonData, null, 2));
 
-  }
-  catch(err){
-    console.error('Error persisting vehicle data for vehicle ' + vehicle.VehicleRef);
-    console.error(err)
-  }
-}
-
-
-function geoJsonByVehicle(vehicleRef) {
-  return geoJsonByVehicleAndDate(vehicleRef, null);
-}
-
-function geoJsonByVehicleAndDate(vehicleRef, dateStr) {
-  if(dateStr == null){
-    // Get current date in New Zealand timezone
-    const now = moment().tz('Pacific/Auckland');
-    dateStr = now.format('YYYYMMDD');
-  }
-
-  // Create filename
-  const dirname = path.join(__dirname, dataDir, dateStr);
-  if(dirname && !fs.existsSync(dirname)){
-    fs.mkdirSync(dirname);
-  }
-  const filename = `${dateStr}_${vehicleRef}.geojson`;
-  const filePath = path.join(dirname, filename);
-
-  let geojsonData;
-
-  // Check if file exists
-  if (fs.existsSync(filePath)) {
-    // Read existing data
-    const existingData = fs.readFileSync(filePath);
-    geojsonData = JSON.parse(existingData);
-
-    return geojsonData;
-  } else {
-    console.error(`File not found: ${filePath}`);
-    return null;
-  }
-}
-
-// function geoJsonToGpxByVehicle(vehicleRef) {
-//   return geoJsonToGpxByVehicleAndDate(vehicleRef, null);
+//   }
+//   catch(err){
+//     console.error('Error persisting vehicle data for vehicle ' + vehicle.VehicleRef);
+//     console.error(err)
+//   }
 // }
+
+
+// function geoJsonByVehicle(vehicleRef) {
+//   return geoJsonByVehicleAndDate(vehicleRef, null);
+// }
+
+// function geoJsonByVehicleAndDate(vehicleRef, dateStr) {
+//   if(dateStr == null){
+//     // Get current date in New Zealand timezone
+//     const now = moment().tz('Pacific/Auckland');
+//     dateStr = now.format('YYYYMMDD');
+//   }
+
+//   // Create filename
+//   const dirname = path.join(__dirname, dataDir, dateStr);
+//   if(dirname && !fs.existsSync(dirname)){
+//     fs.mkdirSync(dirname);
+//   }
+//   const filename = `${dateStr}_${vehicleRef}.geojson`;
+//   const filePath = path.join(dirname, filename);
+
+//   let geojsonData;
+
+//   // Check if file exists
+//   if (fs.existsSync(filePath)) {
+//     // Read existing data
+//     const existingData = fs.readFileSync(filePath);
+//     geojsonData = JSON.parse(existingData);
+
+//     return geojsonData;
+//   } else {
+//     console.error(`File not found: ${filePath}`);
+//     return null;
+//   }
+// }
+
+// // function geoJsonToGpxByVehicle(vehicleRef) {
+// //   return geoJsonToGpxByVehicleAndDate(vehicleRef, null);
+// // }
   
-// function geoJsonToGpxByVehicleAndDate(vehicleRef, dateStr) {
-//   let geojsonData = geoJsonByVehicleAndDate(vehicleRef, dateStr);
-//   return geoJsonToGpx(geojsonData);
-// }
+// // function geoJsonToGpxByVehicleAndDate(vehicleRef, dateStr) {
+// //   let geojsonData = geoJsonByVehicleAndDate(vehicleRef, dateStr);
+// //   return geoJsonToGpx(geojsonData);
+// // }
 
-// function geoJsonToGpx(geojsonData) {
-//   return togpx(geojsonData);
-// }
+// // function geoJsonToGpx(geojsonData) {
+// //   return togpx(geojsonData);
+// // }
 
 function callStopsAPI(){
   // console.log('callStopsAPI....');
@@ -473,7 +473,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
         fs.createReadStream(csvFilePath)
             .pipe(csv(['VehicleRef', 'timestamp', 'long', 'lat', 'tripId', 'Delay', 'Bearing']))
             .on('data', (row) => {
-                const { VehicleRef, timestamp, long, lat } = row;
+                const { VehicleRef, timestamp, long, lat, tripId, delay, bearing } = row;
 
           // console.log(row)
           // console.log(VehicleRef)
@@ -489,6 +489,9 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
                     timestamp: new Date(Number(timestamp) * 1000).toISOString(),
                     long: parseFloat(long),
                     lat: parseFloat(lat),
+                    tripid: tripId,
+                    delay: parseInt(delay, 10),
+                    bearing: parseFloat(bearing),
                 });
             })
             .on('end', resolve)
@@ -508,8 +511,17 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
         track.ele('name').txt(`Vehicle ${vehicleRef}`);
         const trackSegment = track.ele('trkseg');
 
-        points.forEach(({ timestamp, long, lat }) => {
-            trackSegment.ele('trkpt', { lat, lon: long }).ele('time').txt(timestamp);
+        points.forEach(({ timestamp, long, lat, tripId, delay, bearing}) => {
+            // trackSegment.ele('trkpt', { lat, lon: long }).ele('time').txt(timestamp);
+          
+            const trackPoint = trackSegment.ele('trkpt', { lat, lon: long });
+            trackPoint.ele('time').txt(timestamp);
+
+            // Add delay and bearing as custom extensions
+            const extensions = trackPoint.ele('extensions');
+            extensions.ele('tripId').txt(tripId);
+            extensions.ele('delay').txt(delay);
+            extensions.ele('bearing').txt(bearing);
         });
     });
 
@@ -544,6 +556,7 @@ app.get('/gpx', async function(request, response) {
     fs.mkdirSync(dirname);
   }
   const filename = `${dateStr}.csv`;
+  const outputFilename = `${dateStr}.gpx`;
   const filePath = path.join(dirname, filename);
   
   try {
@@ -551,7 +564,7 @@ app.get('/gpx', async function(request, response) {
       
         // Set the response headers for a GPX file
         response.setHeader('Content-Type', 'application/gpx+xml');
-        response.setHeader('Content-Disposition', 'attachment; filename="output.gpx"');
+        response.setHeader('Content-Disposition', `attachment; filename="${outputFilename}"`);
 
         // Send the GPX content as the response
         response.send(gpxContent);
