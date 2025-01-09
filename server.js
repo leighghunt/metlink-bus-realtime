@@ -548,7 +548,7 @@ async function createGpxFromCsv(csvFilePath) { //, gpxFilePath) {
 
 
 
-app.get('/gpx', async function(request, response) {
+app.get('/gpx/:dateStr', async function(request, response) {
   console.log("GPX extract");
   let dateStr = request.params.dateStr;
   
