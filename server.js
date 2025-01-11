@@ -132,7 +132,7 @@ function handleVehiclePositionResponse(data){
         }
 
         // if(persistCounter %12 == 0){
-          persistVehicleCSV(vehicles[vehicleRef]);      
+          // persistVehicleCSV(vehicles[vehicleRef]);       
         // }
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
@@ -576,6 +576,43 @@ app.get('/gpx/:dateStr', async function(request, response) {
 
         // Send the GPX content as the response
         response.send(gpxContent);
+    } catch (error) {
+        console.error('Error generating GPX file:', error);
+        response.status(500).send('Failed to generate GPX file');
+    }
+  
+});
+
+app.get('/csv/:dateStr', async function(request, response) {
+  console.log("CSV download");
+  let dateStr = request.params.dateStr;
+  
+  if(dateStr == null){
+    // Get current date in New Zealand timezone
+    const now = moment().tz('Pacific/Auckland');
+    dateStr = now.format('YYYYMMDD');
+  }
+
+  const dirname = path.join(__dirname, dataDir);
+  if(dirname && !fs.existsSync(dirname)){
+    fs.mkdirSync(dirname);
+  }
+  const filename = `${dateStr}.csv`;
+  const outputFilename = filename;
+  const filePath = path.join(dirname, filename);
+  
+  if(!fs.existsSync(filePath)){
+    console.error(`File ${filePath} not found`);
+    response.status(404).send('File not found');
+  }
+  
+  try {
+        response.setHeader('Content-Type', 'text/csv');
+        response.setHeader('Content-Disposition', `attachment; filename="${outputFilename}"`);
+
+        // Send the GPX content as the response
+        response.download(filePath)
+        // response.send(gpxContent);
     } catch (error) {
         console.error('Error generating GPX file:', error);
         response.status(500).send('Failed to generate GPX file');
