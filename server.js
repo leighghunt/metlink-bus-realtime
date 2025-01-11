@@ -132,7 +132,7 @@ function handleVehiclePositionResponse(data){
         }
 
         // if(persistCounter %12 == 0){
-          // persistVehicleCSV(vehicles[vehicleRef]);       
+          persistVehicleCSV(vehicles[vehicleRef]);       
         // }
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
