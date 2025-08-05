@@ -13,6 +13,10 @@ const { create } = require('xmlbuilder2');
 var server = require('http').Server(app);
 const io = require('socket.io')(server);
 
+require('dotenv').config();
+//import * as dotenv from 'dotenv'
+//dotenv.config()
+
 app.use(express.static('public'));
 
 app.get('/', function(request, response) {
@@ -35,6 +39,11 @@ let tripUpdatesURL = "https://api.opendata.metlink.org.nz/v1/gtfs-rt/tripupdates
 let routesURL = "https://api.opendata.metlink.org.nz/v1/gtfs/routes"
 
 let dataDir = "/Data"
+
+
+console.log("process.env.METLINK_API_KEY");
+console.log(process.env.METLINK_API_KEY);
+
 
 
 // Updated API documentation at https://opendata.metlink.org.nz/getting-started
