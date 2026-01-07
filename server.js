@@ -13,6 +13,27 @@ const { create } = require('xmlbuilder2');
 var server = require('http').Server(app);
 const io = require('socket.io')(server);
 
+const mqtt = require("mqtt");
+const client = mqtt.connect("mqtt://localhost");
+//const client = mqtt.connect("mqtt://test.mosquitto.org");
+
+client.on("connect", () => {
+  client.subscribe("presence", (err) => {
+    if (!err) {
+      client.publish("presence", "Hello mqtt");
+//      client.publish("presence", "Hello mqtt2");
+    }
+  });
+
+//	client.publish("test", "yep");
+});
+
+//client.on("message", (topic, message) => {
+//  // message is Buffer
+//  console.log(message.toString());
+//  client.end();
+//});
+
 require('dotenv').config();
 //import * as dotenv from 'dotenv'
 //dotenv.config()
@@ -145,6 +166,25 @@ function handleVehiclePositionResponse(data){
         // }
       
         io.emit('location', vehicles[vehicleRef]); //{vehicle: service});
+
+	//console.log("metlink/" + vehicleRef);
+      	//client.publish("test2", vehicleRef);
+	client.publish("metlink/" + vehicleRef, JSON.stringify(vehicles[vehicleRef]));
+        client.publish("metlink/" + vehicleRef + "/RecordedAtTime", recordedAtTime);
+        client.publish("metlink/" + vehicleRef + "/Lat", Lat.toString());
+        client.publish("metlink/" + vehicleRef + "/Long", Long.toString());
+        client.publish("metlink/" + vehicleRef + "/Bearing", Bearing.toString());
+        client.publish("metlink/" + vehicleRef + "/DepartureTime", DepartureTime);
+//        client.publish("metlink/" + vehicleRef + "/Trip", Trip);
+        client.publish("metlink/" + vehicleRef + "/RouteId", RouteId.toString());
+        client.publish("metlink/" + vehicleRef + "/Route", Route);
+            //Lat: Lat,
+//            Long: Long,
+//            Bearing: Bearing,
+//            DepartureTime: DepartureTime,
+//            Trip: Trip,
+//            RouteId: RouteId,
+//            Route: Route
         
       } else {
         // console.log("ERRRrrrr....")
