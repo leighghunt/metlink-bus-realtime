@@ -1,1 +1,0 @@
-I need to update this ReadMe but this project uses the MetLink API to retrieve live bus, train and ferry positions, and display them all on a live map, using LeafletJS and socket.io
