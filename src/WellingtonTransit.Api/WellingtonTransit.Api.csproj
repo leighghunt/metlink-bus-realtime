@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>WellingtonTransit.Api</RootNamespace>
+    <UserSecretsId>a8cf9c9b-0bae-42c2-931e-dc49b64a2e1c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
