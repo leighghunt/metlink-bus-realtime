@@ -23,10 +23,20 @@ function reducer(state: TransitState, action: Action): TransitState {
   switch (action.type) {
     case 'UPSERT_VEHICLES': {
       const next = { ...state.vehicles }
+      const newActiveRoutes = new Set(state.activeRoutes)
+      let routesChanged = false
       for (const v of action.payload) {
         next[v.vehicleRef] = v
+        // If routes haven't loaded yet, treat every vehicle's route as active
+        // so they're visible from the first SignalR message
+        if (v.routeId && !state.routes[v.routeId] && !newActiveRoutes.has(v.routeId)) {
+          newActiveRoutes.add(v.routeId)
+          routesChanged = true
+        }
       }
-      return { ...state, vehicles: next }
+      return routesChanged
+        ? { ...state, vehicles: next, activeRoutes: newActiveRoutes }
+        : { ...state, vehicles: next }
     }
     case 'SET_ROUTES': {
       const routes: Record<string, Route> = {}

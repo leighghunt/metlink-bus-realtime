@@ -107,19 +107,21 @@ export default function TransitMap({
     const now = Date.now()
 
     for (const [ref, vehicle] of Object.entries(vehicles)) {
-      const route = routes[vehicle.routeId]
-      if (!route) continue
-
-      // Filter by active routes
-      const visible = activeRoutes.has(vehicle.routeId)
-
-      // Build colour
-      const stale = isStale(vehicle.timestamp)
+      // Drop vehicles that haven't reported in 15 minutes
       const reallyStale = isStale(vehicle.timestamp, 15 * 60 * 1000)
       if (reallyStale) {
         removeVehicleMarker(ref)
         continue
       }
+
+      // Filter by active routes — hide marker but don't skip entirely so
+      // the vehicle is still tracked in state and can reappear when toggled
+      // Also show the vehicle even if its route hasn't loaded yet (routes
+      // arrive via a separate fetch and may lag behind the first SignalR batch)
+      const visible = activeRoutes.has(vehicle.routeId)
+
+      // Build colour
+      const stale = isStale(vehicle.timestamp)
 
       const color = stale ? '#6b7280' : getDelayColour(vehicle.delaySeconds)
       const mode = getVehicleMode(vehicle.route)
