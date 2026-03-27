@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using WellingtonTransit.Api.Models;
+using Route = WellingtonTransit.Api.Models.Route;
 
 namespace WellingtonTransit.Api.Services;
 
@@ -27,6 +28,9 @@ public class MetlinkApiClient(HttpClient httpClient, IConfiguration config, ILog
     {
         try
         {
+          logger.LogInformation("Fetching vehicle positions from Metlink API");
+          logger.LogInformation("Using Api Key: {ApiKey}", ApiKey);
+
             using var response = await httpClient.SendAsync(BuildRequest(VehiclePositionsUrl), ct);
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync(ct);

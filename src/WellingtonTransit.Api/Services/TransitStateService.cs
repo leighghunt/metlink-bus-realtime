@@ -1,5 +1,6 @@
 using System.Collections.Concurrent;
 using WellingtonTransit.Api.Models;
+using Route = WellingtonTransit.Api.Models.Route;
 
 namespace WellingtonTransit.Api.Services;
 
